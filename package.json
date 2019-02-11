@@ -1,7 +1,7 @@
 {
   "name": "vue-quicktemplate",
   "version": "0.1.0",
-  "author": "loitd"
+  "author": "loitd",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",

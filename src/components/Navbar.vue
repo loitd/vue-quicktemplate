@@ -1,54 +1,94 @@
 <template>
-    <b-navbar toggleable="md" type="light" variant="light">
 
-    <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
+<b-navbar toggleable="md" type="light" variant="faded">
+    <b-container>
+        <!-- <b-navbar-toggle> for use with the <b-collapse is-nav> component. -->
+        <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
 
-    <b-navbar-brand href="#">NavBar</b-navbar-brand>
+        <!-- The <b-navbar-brand> generates a link if href is provided, or a <router-link> if to is provided. If neither is given it renders as a <div> tag. -->
+        <b-navbar-brand tag="h1" class="mb-0" to="/">
+            <span><font-awesome-icon icon="coffee" /></span> 
+            {{ title }}
+        </b-navbar-brand>
 
-    <b-collapse is-nav id="nav_collapse">
+        <!-- <b-collapse is-nav> for grouping and hiding navbar contents by a parent breakpoint. -->
+        <b-collapse is-nav id="nav_collapse">
 
-        <b-navbar-nav>
-        <b-nav-item href="#">Link</b-nav-item>
-        <b-nav-item href="#" disabled>Disabled</b-nav-item>
-        </b-navbar-nav>
+            <!-- <b-nav-form> for any form controls and actions. -->
+            <b-nav-form class="searchbox" >
+                <b-input-group size="sm">
+                    <b-input-group-text slot="prepend">
+                        <span><font-awesome-icon :icon="['fas', 'search']" /></span>
+                    </b-input-group-text>
+                    <b-form-input size="md" class="mr-sm-2" type="text" placeholder="Search ..." style="border-left: none;"/>
+                </b-input-group>
+            </b-nav-form>
 
-        <!-- Right aligned nav items -->
-        <b-navbar-nav class="ml-auto">
+            <!-- <b-navbar-nav> for a full-height and lightweight navigation (including support for dropdowns). -->
+            <b-navbar-nav class="midnav">
+                <!-- <b-nav-item> for link (and router-link) action items -->
+                <b-nav-item to="/">
+                    <span><font-awesome-icon :icon="['fas', 'home']" /></span>
+                    <span>Home</span>
+                </b-nav-item>
+                <b-nav-item to="/">
+                    <font-awesome-layers full-width class="fa-1x" style="background:MistyRose">
+                        <span><font-awesome-icon :icon="['fas', 'sun']" /></span>
+                        <font-awesome-layers-text class="fa-layers-counter" transform="down-6 left-2 shrink-10" value="N" style="background:Tomato; font-size: 1.375rem;"/>
+                        <!-- <span class="fa-layers-counter" style="background:Tomato; font-size: 1.375rem;">NEW</span> -->
+                    </font-awesome-layers>
+                    <span>Courses</span>
+                </b-nav-item>
+                <b-nav-item to="/">
+                    <span><font-awesome-icon :icon="['fas', 'gift']" /></span>
+                    <span>Refferals</span>
+                </b-nav-item>
+                <b-nav-item to="/"><!-- <b-nav-item> for link (and router-link) action items -->
+                    <span><font-awesome-icon :icon="['fas', 'question']" /></span>
+                    <span>Help</span>
+                </b-nav-item>
+            </b-navbar-nav>
 
-        <b-nav-form>
-            <b-form-input size="sm" class="mr-sm-2" type="text" placeholder="Search"/>
-            <b-button size="sm" class="my-2 my-sm-0" type="submit">Search</b-button>
-        </b-nav-form>
+            <!-- Right aligned nav items -->
+            <b-navbar-nav class="ml-auto rightnav">
+                <b-nav-item to="/" right class="notification">
+                    <font-awesome-layers full-width class="fa-1x">
+                        <span><font-awesome-icon :icon="['fas', 'bell']" /></span>
+                        <font-awesome-layers-text class="fa-layers-counter" transform="down-12 left-2 shrink-12" value="" style="background: Tomato; color:White;"/>
+                    </font-awesome-layers>
+                </b-nav-item>
+                <!-- <b-nav-item-dropdown> for navbar dropdown menus -->
+                <b-nav-item-dropdown right class="profiledd">
+                    <!-- Using button-content slot -->
+                    <template slot="button-content">
+                        <b-img-lazy id="userthumb" rounded="circle" thumbnail src="https://picsum.photos/64/64/?image=89" style="" width="28" height="28" blank-color="#bbb" alt="img" />
+                        <span>Username</span>
+                    </template>
+                    <b-dropdown-item to="#">Profile</b-dropdown-item>
+                    <b-dropdown-item to="#">Signout</b-dropdown-item>
+                </b-nav-item-dropdown>
+            </b-navbar-nav>
 
-        <b-nav-item-dropdown text="Lang" right>
-            <b-dropdown-item href="#">EN</b-dropdown-item>
-            <b-dropdown-item href="#">ES</b-dropdown-item>
-            <b-dropdown-item href="#">RU</b-dropdown-item>
-            <b-dropdown-item href="#">FA</b-dropdown-item>
-        </b-nav-item-dropdown>
-
-        <b-nav-item-dropdown right>
-            <!-- Using button-content slot -->
-            <template slot="button-content">
-            <em>User</em>
-            </template>
-            <b-dropdown-item href="#">Profile</b-dropdown-item>
-            <b-dropdown-item href="#">Signout</b-dropdown-item>
-        </b-nav-item-dropdown>
-        </b-navbar-nav>
-
-    </b-collapse>
-    </b-navbar>
+        </b-collapse><!-- collapse -->
+    </b-container>
+</b-navbar><!-- whole navbar -->
 
     <!-- navbar-1.vue -->
 </template>
 
 <script>
 export default {
-
+    name: 'Navbar',
+    components: {},
+    props: {
+        title: String,
+    }
 }
 </script>
 
-<style>
-
+<style lang="scss" scoped>
+// Import component styles
+// @ is an alias to /src
+// Splitted to a scss file mean packed, you can make any change here
+@import "@/assets/scss/components/navbar.scss";
 </style>

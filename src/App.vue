@@ -1,9 +1,11 @@
+// This file is the base template of the application. It consists of router-link(s) and a single router-view. 
+// Once a link, the router-link, is clicked, the associated component loads into the router-view element.
 <template>
   <div id="app">
-    <div id="nav">
+    <!-- <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
-    </div>
+    </div> -->
     <router-view/>
   </div>
 </template>
