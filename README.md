@@ -9,6 +9,8 @@ With additional pluggins beside common ones (`babel`, `webpack`)
 ready and common components based on Bootstrap and other pluggins installed. 
 Very detail comments about all things in Vue.JS  
 All for quick and handy start with Vue 
+Demo:
+* (https://vqt.surge.sh/#/)[https://vqt.surge.sh/#/]
 
 ## git related
 To pull from github to local
