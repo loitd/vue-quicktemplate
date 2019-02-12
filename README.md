@@ -9,7 +9,7 @@ Vue.JS quick template with:
     * `bootstrap-vue` for Bootstrap 4, 
     * `fontawesome` for FontAwesome 5, 
     * `sass-loader`, 
-    * ... 
+    * ...
 All for quick and handy start with Vue 
 Local Demo:
 ```bash
