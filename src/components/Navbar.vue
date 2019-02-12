@@ -3,13 +3,20 @@
 <b-navbar toggleable="md" type="light" variant="faded">
     <b-container>
         <!-- <b-navbar-toggle> for use with the <b-collapse is-nav> component. -->
-        <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
-
+        <b-navbar-toggle target="sidebar-wrapper" @click.native="sidebarTongled" v-if="isSidebar == 'yes'">
+            <span v-bind:style="tongledButton.bindv"><font-awesome-icon :icon="['fas', 'angle-double-left']" /></span>
+            <span v-bind:style="tongledButton.bindh"><font-awesome-icon :icon="['fas', 'angle-double-right']" /></span><!-- when closed -->
+        </b-navbar-toggle>
         <!-- The <b-navbar-brand> generates a link if href is provided, or a <router-link> if to is provided. If neither is given it renders as a <div> tag. -->
-        <b-navbar-brand tag="h1" class="mb-0" to="/">
+        <b-navbar-brand center tag="h1" class="mb-0" to="/">
             <span><font-awesome-icon icon="coffee" /></span> 
             {{ title }}
         </b-navbar-brand>
+        <!-- <b-navbar-toggle> for use with the <b-collapse is-nav> component. -->
+        <b-navbar-toggle target="nav_collapse" @click.native="navbarTongled">
+            <span v-bind:style="tongledButton.bindv"><font-awesome-icon :icon="['fas', 'angle-double-up']" /></span>
+            <span v-bind:style="tongledButton.bindh"><font-awesome-icon :icon="['fas', 'angle-double-down']" /></span><!-- when closed -->
+        </b-navbar-toggle>
 
         <!-- <b-collapse is-nav> for grouping and hiding navbar contents by a parent breakpoint. -->
         <b-collapse is-nav id="nav_collapse">
@@ -79,10 +86,42 @@
 <script>
 export default {
     name: 'Navbar',
+    data: function() {
+        return {
+            tongledButton: {
+                // Init state for tongledButton
+                state: "closed",
+                bindh: {display: 'block'},
+                bindv: {display: 'none'},
+            }, 
+        }
+    },
     components: {},
     props: {
+        // this props is for parents to send to components
         title: String,
-        isSidebar: Boolean,
+        isSidebar: String, //yes or no
+    }, 
+    methods: {
+        navbarTongled: function() {
+            // alert("navbarTongled"); //for debug
+            if (this.tongledButton.state === "closed") {
+                // pretend to be opened
+                this.tongledButton.state = "opened";
+                this.tongledButton.bindh = {display: 'none'};
+                this.tongledButton.bindv = {display: 'block'};
+            } else {
+                // pretend to be closed
+                this.tongledButton.state = "closed";
+                this.tongledButton.bindh = {display: 'block'};
+                this.tongledButton.bindv = {display: 'none'};
+            }
+        }, 
+        sidebarTongled: function() {
+            
+        }
+    },
+    computed: {
     }
 }
 </script>

@@ -6,7 +6,7 @@
       <Sidebar />
     </b-col>
     <b-col md="11" class="page-content">
-      <Navbar title="VQT"/>
+      <Navbar title="VQT" isSidebar="yes"/>
     </b-col>
   </b-row>
 </b-container>

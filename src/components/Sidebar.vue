@@ -1,14 +1,10 @@
 <template>
     <!-- Sidebar -->
     <div class="bg-light border-right" id="sidebar-wrapper">
-      <div class="sidebar-heading">Start Bootstrap </div>
+      <div class="sidebar-heading">Menu</div>
       <div class="list-group list-group-flush">
         <a href="#" class="list-group-item list-group-item-action bg-light">Menu1</a>
         <a href="#" class="list-group-item list-group-item-action bg-light">Menu2</a>
-        <a href="#" class="list-group-item list-group-item-action bg-light">Menu3</a>
-        <a href="#" class="list-group-item list-group-item-action bg-light">Menu4</a>
-        <a href="#" class="list-group-item list-group-item-action bg-light">Profile</a>
-        <a href="#" class="list-group-item list-group-item-action bg-light">Status</a>
       </div>
     </div>
     <!-- /#sidebar-wrapper -->

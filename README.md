@@ -4,13 +4,13 @@ Vue.JS quick template with:
 * Progressive Web Application (PWA) ready, 
 * Very detail comments about all things (Readable code)
 * Full of pluggins available by default With additional pluggins beside common ones (`babel`, `webpack`)
+    * `vue@cli` version 3.4
     * `vuex`, 
     * `vue-router`, 
     * `bootstrap-vue` for Bootstrap 4, 
     * `fontawesome` for FontAwesome 5, 
     * `sass-loader`, 
-    * ...  
-All for quick and handy start with Vue 
+\All for quick and handy start with Vue 
 Local Demo:
 ```bash
 npm install -g serve
