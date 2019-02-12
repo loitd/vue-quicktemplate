@@ -1,12 +1,13 @@
 <template>
     <!-- Sidebar -->
-    <div class="bg-light border-right" id="sidebar-wrapper">
-      <div class="sidebar-heading">Menu</div>
+    <b-list-group id="sidebar-wrapper">
       <div class="list-group list-group-flush">
-        <a href="#" class="list-group-item list-group-item-action bg-light">Menu1</a>
-        <a href="#" class="list-group-item list-group-item-action bg-light">Menu2</a>
+        <b-list-group-item to="#">Menu 1</b-list-group-item>
+        <b-list-group-item to="#">Menu 2</b-list-group-item>
+        <b-list-group-item>Menu 3</b-list-group-item>
+        <b-list-group-item>Menu 4</b-list-group-item>
       </div>
-    </div>
+    </b-list-group>
     <!-- /#sidebar-wrapper -->
 </template>
 
@@ -15,7 +16,6 @@ export default {
     name: 'Sidebar',
     components: {},
     props: {
-        
     }
 }
 </script>

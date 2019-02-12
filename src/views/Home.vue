@@ -1,12 +1,12 @@
 <template>
 <!-- This is the template for home page -->
-<b-container fluid class="page">
-  <b-row class="page-home">
-    <b-col md="1" class="page-sidebar">
+<b-container fluid class="page" id="page-wrapper">
+  <Navbar title="VQT" isSidebar="yes"/>
+  <b-row id="page-home">
+    <b-col id="page-sidebar" v-bind:style="this.$store.getters.sidebarButton.pageSidebar">
       <Sidebar />
     </b-col>
-    <b-col md="11" class="page-content">
-      <Navbar title="VQT" isSidebar="yes"/>
+    <b-col id="page-content">
     </b-col>
   </b-row>
 </b-container>
@@ -26,11 +26,10 @@ export default {
 }
 </script>
 
-<style lang="scss">
-
-.page-sidebar, 
-.page-content {
-  padding: 0;
-}
+<style lang="scss" scoped>
+// Import component styles
+// @ is an alias to /src
+// Splitted to a scss file mean packed, you can make any change here
+@import "@/assets/scss/home.scss";
 </style>
 

@@ -1,0 +1,48 @@
+// please remember the mobile first theory
+// So this mean this styles is for V-mobile version
+#page-wrapper,
+#page-sidebar, 
+#page-content {
+  padding: 0;
+}
+
+#page-home {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+#page-sidebar {
+  margin-left: -40vw;
+  max-width: 40vw;
+  min-width: 40vw;
+  min-height: 100vh;
+  background-color: white;
+  border-right: 1px solid lightgrey;
+  border-top: 1px solid lightgrey;
+}
+
+#page-content {
+  min-width: 100vw;
+}
+
+// Mobile horizontal view, prefered vertical view and now need addidtional query for H-view
+@media only screen and (min-width: 576px) {
+
+}
+
+
+// Mobile first means query only apply to laptop/desktop, mobile always first
+// So that will load faster in mobile
+@media only screen and (min-width: 992px) {
+  #page-sidebar {
+    margin-left: 0 !important;
+    max-width: 20vw;
+    min-width: 20vw;
+    border-top: 0;
+  }
+  #page-content {
+    max-width: 80vw;
+    min-width: 80vw;
+  }
+    
+}
