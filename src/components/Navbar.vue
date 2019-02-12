@@ -82,6 +82,7 @@ export default {
     components: {},
     props: {
         title: String,
+        isSidebar: Boolean,
     }
 }
 </script>

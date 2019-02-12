@@ -1,0 +1,13 @@
+// please remember the mobile first theory
+
+
+// Mobile horizontal view, prefered vertical view and now need addidtional query for H-view
+@media only screen and (min-width: 576px) {
+
+}
+
+
+// Mobile first means query only apply to laptop/desktop, mobile always first
+// So that will load faster in mobile
+@media only screen and (min-width: 992px) {
+}

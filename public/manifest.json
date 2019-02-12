@@ -1,6 +1,6 @@
 {
-  "name": "vbdash2",
-  "short_name": "vbdash2",
+  "name": "vue-quicktemplate",
+  "short_name": "vqt",
   "icons": [
     {
       "src": "./img/icons/android-chrome-192x192.png",

@@ -1,12 +1,15 @@
 <template>
-  <b-row class="home">
-    <b-col sm="3">
+<!-- This is the template for home page -->
+<b-container fluid class="page">
+  <b-row class="page-home">
+    <b-col md="1" class="page-sidebar">
       <Sidebar />
     </b-col>
-    <b-col sm="9" class="page-content">
+    <b-col md="11" class="page-content">
       <Navbar title="VQT"/>
     </b-col>
   </b-row>
+</b-container>
 </template>
 
 <script>
@@ -22,3 +25,12 @@ export default {
   }
 }
 </script>
+
+<style lang="scss">
+
+.page-sidebar, 
+.page-content {
+  padding: 0;
+}
+</style>
+
