@@ -1,5 +1,19 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
-  </div>
+<div id="aboutpage">
+  <LineChartCard />
+</div>  
 </template>
+
+<script>
+import LineChartCard from '@/components/LineChartCard.vue'
+export default {
+  name: 'about',
+  components: {
+    LineChartCard,
+  }
+}
+</script>
+
+<style lang="scss">
+
+</style>

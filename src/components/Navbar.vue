@@ -49,7 +49,7 @@
                     <span><font-awesome-icon :icon="['fas', 'gift']" /></span>
                     <span>Referals</span>
                 </b-nav-item>
-                <b-nav-item to="/#help"><!-- <b-nav-item> for link (and router-link) action items -->
+                <b-nav-item to="/about"><!-- <b-nav-item> for link (and router-link) action items -->
                     <span><font-awesome-icon :icon="['fas', 'question']" /></span>
                     <span>Help</span>
                 </b-nav-item>

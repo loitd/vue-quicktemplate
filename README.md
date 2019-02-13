@@ -1,7 +1,7 @@
 # vue-quick-template
 Vue.JS quick template with:
 * Mobile-first designed components: Navbar, Sidebar, ... 
-* Progressive Web Application (PWA) ready, 
+* Progressive Web Application (PWA) ready (see all capable of PWA compared to Natives: https://whatwebcando.today/), 
 * Very detail comments about all things (Readable code)
 * Full of pluggins available by default With additional pluggins beside common ones (`babel`, `webpack`)
     * `vue@cli` version 3.4
@@ -10,6 +10,7 @@ Vue.JS quick template with:
     * `bootstrap-vue` for Bootstrap 4, 
     * `fontawesome` for FontAwesome 5, 
     * `sass-loader`, 
+    * `chartjs`, 
 \All for quick and handy start with Vue 
 Local Demo:
 ```bash

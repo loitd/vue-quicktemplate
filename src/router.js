@@ -5,6 +5,10 @@ import Home from './views/Home.vue'
 Vue.use(Router)
 
 export default new Router({
+  // remove hashbang #! from url?
+  // You'd actually just want to set mode to 'history'.
+  // Make sure your server is configured to handle these links, though. https://router.vuejs.org/guide/essentials/history-mode.html
+  mode: 'history',
   // Defines routes for the app
   routes: [
     {
