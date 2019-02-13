@@ -11,7 +11,7 @@
 </template>
 
 <style lang="scss">
-#app {
+#app, .dropdown-item {
   font-family: 'Roboto', 'Avenir', Helvetica, Arial, sans-serif;
   font-size: 0.9rem;
   -webkit-font-smoothing: antialiased;
