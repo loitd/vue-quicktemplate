@@ -16,7 +16,9 @@
     background: lightgray;
 }
 
-li.nav-item:hover a {
+li.nav-item:hover a,
+.midnav .nav-item .nav-link.active,
+.navbar .navbar-brand.active {
     color: #028f68 !important;
 }
 

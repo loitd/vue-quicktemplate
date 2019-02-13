@@ -16,7 +16,7 @@ export default new Vuex.Store({
         state: "closed",
         navright: {display: 'block'},
         navleft: {display: 'none'},
-        pageSidebar: {'margin-left': '-40vw'},
+        pageSidebar: {'margin-left': '-50vw'},
     }
   },
   mutations: {
@@ -48,7 +48,7 @@ export default new Vuex.Store({
             state.sidebarButton.state = "closed";
             state.sidebarButton.navright = {display: 'block'};
             state.sidebarButton.navleft = {display: 'none'};
-            state.sidebarButton.pageSidebar = {'margin-left': '-40vw'};
+            state.sidebarButton.pageSidebar = {'margin-left': '-50vw'};
         }
     }
   },

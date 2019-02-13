@@ -7,7 +7,7 @@
             <span v-bind:style="this.$store.getters.sidebarButton.navleft"><font-awesome-icon :icon="['fas', 'angle-double-left']" /></span><!-- when closed -->
         </b-navbar-toggle>
         <!-- The <b-navbar-brand> generates a link if href is provided, or a <router-link> if to is provided. If neither is given it renders as a <div> tag. -->
-        <b-navbar-brand center tag="h1" class="mb-0" to="/">
+        <b-navbar-brand center tag="h1" class="mb-0" to="/" exact>
             <span><font-awesome-icon icon="coffee" /></span> 
             {{ title }}
         </b-navbar-brand>
@@ -33,11 +33,11 @@
             <!-- <b-navbar-nav> for a full-height and lightweight navigation (including support for dropdowns). -->
             <b-navbar-nav class="midnav">
                 <!-- <b-nav-item> for link (and router-link) action items -->
-                <b-nav-item to="/">
+                <b-nav-item to="/" exact>
                     <span><font-awesome-icon :icon="['fas', 'home']" /></span>
                     <span>Home</span>
                 </b-nav-item>
-                <b-nav-item to="/">
+                <b-nav-item to="/#course">
                     <font-awesome-layers full-width class="fa-1x" style="background:MistyRose">
                         <span><font-awesome-icon :icon="['fas', 'sun']" /></span>
                         <font-awesome-layers-text class="fa-layers-counter" transform="down-6 left-2 shrink-10" value="N" style="background:Tomato; font-size: 1.375rem;"/>
@@ -45,11 +45,11 @@
                     </font-awesome-layers>
                     <span>Courses</span>
                 </b-nav-item>
-                <b-nav-item to="/">
+                <b-nav-item to="/#referals">
                     <span><font-awesome-icon :icon="['fas', 'gift']" /></span>
-                    <span>Refferals</span>
+                    <span>Referals</span>
                 </b-nav-item>
-                <b-nav-item to="/"><!-- <b-nav-item> for link (and router-link) action items -->
+                <b-nav-item to="/#help"><!-- <b-nav-item> for link (and router-link) action items -->
                     <span><font-awesome-icon :icon="['fas', 'question']" /></span>
                     <span>Help</span>
                 </b-nav-item>
@@ -57,7 +57,7 @@
 
             <!-- Right aligned nav items -->
             <b-navbar-nav class="ml-auto rightnav">
-                <b-nav-item to="/" right class="notification">
+                <b-nav-item to="/#notification" right class="notification">
                     <font-awesome-layers full-width class="fa-1x">
                         <span><font-awesome-icon :icon="['fas', 'bell']" /></span>
                         <font-awesome-layers-text class="fa-layers-counter" transform="down-12 left-2 shrink-12" value="" style="background: Tomato; color:White;"/>
@@ -70,8 +70,8 @@
                         <b-img-lazy id="userthumb" rounded="circle" thumbnail src="https://picsum.photos/64/64/?image=89" style="" width="28" height="28" blank-color="#bbb" alt="img" />
                         <span>Username</span>
                     </template>
-                    <b-dropdown-item to="#">Profile</b-dropdown-item>
-                    <b-dropdown-item to="#">Signout</b-dropdown-item>
+                    <b-dropdown-item to="#profile">Profile</b-dropdown-item>
+                    <b-dropdown-item to="#signout">Signout</b-dropdown-item>
                 </b-nav-item-dropdown>
             </b-navbar-nav>
 

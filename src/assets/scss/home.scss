@@ -12,13 +12,15 @@
 }
 
 #page-sidebar {
-  margin-left: -40vw;
-  max-width: 40vw;
-  min-width: 40vw;
-  min-height: 100vh;
+  margin-left: -50vw;
+  max-width: 50vw;
+  min-width: 50vw;
+  max-height: 100vh;
   background-color: white;
   border-right: 1px solid lightgrey;
   border-top: 1px solid lightgrey;
+  border-bottom: 1px solid lightgrey;
+
 }
 
 #page-content {
