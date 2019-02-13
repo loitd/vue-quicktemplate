@@ -2,10 +2,19 @@
 // So this mean this styles is for V-mobile version
 @import url(https://fonts.googleapis.com/css?family=Roboto);
 
-.navbar {
-    font-family: 'Roboto', 'Avenir', Helvetica, Arial, sans-serif;
-    font-size: 1.1rem;
+.navbar-nav, 
+.profiledd .dropdown-item {
     color: grey;
+}
+
+.navbar a.active,  
+.nav-link.active,
+.navbar-brand.active,
+.navbar li:hover a,  
+.navbar a:hover,
+.profiledd .dropdown-item.active {
+    color: #028f68 !important;
+    background-color: white;
 }
 
 #userthumb {
@@ -16,12 +25,6 @@
     background: lightgray;
 }
 
-li.nav-item:hover a,
-.midnav .nav-item .nav-link.active,
-.navbar .navbar-brand.active {
-    color: #028f68 !important;
-}
-
 // Styles for searchbox
 .searchbox {
     padding: 5px 0;
@@ -30,6 +33,7 @@ li.nav-item:hover a,
     border-right: none;
     background-color: white;
 }
+
 
 // Mobile horizontal view, prefered vertical view and now need addidtional query for H-view
 @media only screen and (min-width: 576px) {
@@ -44,11 +48,8 @@ li.nav-item:hover a,
 @media only screen and (min-width: 992px) {
     
     .navbar {
-        font-family: 'Roboto', 'Avenir', Helvetica, Arial, sans-serif;
-        font-size: 0.9rem;
         padding: 1rem 0px;
         border-bottom: 1px solid lightgray;
-        color: grey;
     }
 
     .navbar-brand,

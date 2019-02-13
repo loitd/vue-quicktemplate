@@ -9,6 +9,7 @@
       <Sidebar />
     </b-col>
     <b-col id="page-content">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque voluptates, aspernatur accusamus alias dolorem totam reprehenderit enim dicta nisi aliquam ratione voluptate sint aperiam fugiat ut magni magnam quae iusto?
     </b-col>
   </b-row>
 </b-container>

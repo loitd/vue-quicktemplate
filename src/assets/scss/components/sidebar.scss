@@ -10,6 +10,12 @@
     overflow-y: scroll;
 }
 
+#sidebarmenu .list-group-item.active {
+    background-color: #028f68;
+    border-color: #028f68;
+}
+
+// Styles for sidebarabout
 #sidebarabout {
     position: absolute;
     bottom: 0;

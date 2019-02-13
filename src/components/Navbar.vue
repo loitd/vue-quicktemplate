@@ -70,8 +70,8 @@
                         <b-img-lazy id="userthumb" rounded="circle" thumbnail src="https://picsum.photos/64/64/?image=89" style="" width="28" height="28" blank-color="#bbb" alt="img" />
                         <span>Username</span>
                     </template>
-                    <b-dropdown-item to="#profile">Profile</b-dropdown-item>
-                    <b-dropdown-item to="#signout">Signout</b-dropdown-item>
+                    <b-dropdown-item to="#profile" exact>Profile</b-dropdown-item>
+                    <b-dropdown-item to="#signout" exact>Signout</b-dropdown-item>
                 </b-nav-item-dropdown>
             </b-navbar-nav>
 
