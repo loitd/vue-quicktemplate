@@ -1,4 +1,4 @@
-# vue-quicktemplate
+# vue-quick-template
 Vue.JS quick template with:
 * Mobile-first designed components: Navbar, Sidebar, ... 
 * Progressive Web Application (PWA) ready, 
