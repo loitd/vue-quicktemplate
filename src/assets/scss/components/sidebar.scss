@@ -8,7 +8,7 @@
     position: absolute;
     bottom: 0;
     left: 0;
-    max-height: 20vh;
+    max-height: 20%;
     overflow: hidden;
     background-color: white;
     min-width: 100%;
@@ -17,8 +17,8 @@
 }
 
 #sidebarmenu {
-    min-height: 80vh;
-    max-height: 80vh; 
+    min-height: 80%;
+    max-height: 80%; 
     overflow-y: scroll;
 }
 
