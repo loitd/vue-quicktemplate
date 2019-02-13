@@ -7,7 +7,7 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "deploy": "git add * && git commit -am 'deploy-minor-fixes' && git push origin master && npm run build && surge dist"
+    "deploy": "git add * && git commit -am 'deploy-minor-fixes' && git push origin master && npm run build && surge -d vqt.surge.sh dist"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.6",
