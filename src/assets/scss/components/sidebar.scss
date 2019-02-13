@@ -4,11 +4,17 @@
     padding: 0;
 }
 
+#sidebarmenu {
+    min-height: 80vh;
+    max-height: 80vh; 
+    overflow-y: scroll;
+}
+
 #sidebarabout {
     position: absolute;
     bottom: 0;
     left: 0;
-    max-height: 20%;
+    max-height: 20vh;
     overflow: hidden;
     background-color: white;
     min-width: 100%;
@@ -16,14 +22,8 @@
     padding: 0.375rem 0.375rem 0.375rem 1rem;
 }
 
-#sidebarmenu {
-    min-height: 80%;
-    max-height: 80%; 
-    overflow-y: scroll;
-}
-
 #sidebarabouttitle {
-    font-size: 1rem;
+    font-size: 2vh;
     font-weight: bold;
     font-family: 'Roboto', 'Avenir', Helvetica, Arial, sans-serif;
     color: gray;
@@ -32,7 +32,7 @@
 
 #sidebaraboutdesc {
     font-style: italic;
-    font-size: 0.9rem;
+    font-size: 2vh;
 }
 // Mobile horizontal view, prefered vertical view and now need addidtional query for H-view
 @media only screen and (min-width: 576px) {

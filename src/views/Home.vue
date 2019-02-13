@@ -1,7 +1,9 @@
 <template>
 <!-- This is the template for home page -->
 <b-container fluid class="page" id="page-wrapper">
-  <Navbar title="VQT" isSidebar="yes"/>
+  <div id="page-nav">
+    <Navbar title="VQT" isSidebar="yes"/>
+  </div>
   <b-row id="page-home">
     <b-col id="page-sidebar" v-bind:style="this.$store.getters.sidebarButton.pageSidebar">
       <Sidebar />
