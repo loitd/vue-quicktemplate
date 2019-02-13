@@ -28,7 +28,7 @@
             <em id="sidebaraboutdesc">
                 All for quick and handy start with Vue. 
                 <b-link href="https://github.com/loitd/vue-quicktemplate">Github</b-link> 
-                - <b-link href="https://twitter.com/loitranduc/">Twitter</b-link>
+                - <b-link href="https://twitter.com/loitranduc/">Twitter</b-link>. Version 201902131309.
             </em>
         </b-media>
 
