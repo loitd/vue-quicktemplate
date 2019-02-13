@@ -1,7 +1,39 @@
 // please remember the mobile first theory
 // So this mean this styles is for V-mobile version
+#sidebar-wrapper {
+    padding: 0;
+}
 
+#sidebarabout {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    max-height: 20vh;
+    overflow: hidden;
+    background-color: white;
+    min-width: 100%;
+    border-top: 1px solid lightgrey;
+    padding: 0.375rem 0.375rem 0.375rem 1rem;
+}
 
+#sidebarmenu {
+    min-height: 80vh;
+    max-height: 80vh; 
+    overflow-y: scroll;
+}
+
+#sidebarabouttitle {
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: 'Roboto', 'Avenir', Helvetica, Arial, sans-serif;
+    color: gray;
+    font-style: italic;
+}
+
+#sidebaraboutdesc {
+    font-style: italic;
+    font-size: 0.9rem;
+}
 // Mobile horizontal view, prefered vertical view and now need addidtional query for H-view
 @media only screen and (min-width: 576px) {
 
@@ -11,4 +43,5 @@
 // Mobile first means query only apply to laptop/desktop, mobile always first
 // So that will load faster in mobile
 @media only screen and (min-width: 992px) {
+
 }
