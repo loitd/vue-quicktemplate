@@ -5,8 +5,8 @@
 }
 
 #sidebarmenu {
-    min-height: 80vh;
-    max-height: 80vh; 
+    min-height: 100vh;
+    max-height: 100vh; 
     overflow-y: scroll;
 }
 
@@ -15,6 +15,7 @@
     bottom: 0;
     left: 0;
     max-height: 20vh;
+    min-height: 20vh;
     overflow: hidden;
     background-color: white;
     min-width: 100%;
