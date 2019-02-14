@@ -10,9 +10,9 @@ Vue.JS quick template with:
     * `bootstrap-vue` for Bootstrap 4, 
     * `fontawesome` for FontAwesome 5, 
     * `sass-loader`, 
-    * `chartjs`, 
-All for quick and handy start with Vue 
-[![Package Quality](https://npm.packagequality.com/badge/vue-quick-template.png)](https://packagequality.com/#?package=vue-quick-template)
+    * `chartjs`,  
+All for quick and handy start with Vue  
+[![Package Quality](https://npm.packagequality.com/shield/vue-quick-template.svg)](https://packagequality.com/#?package=vue-quick-template)
 [![CircleCI](https://circleci.com/gh/loitd/vue-quicktemplate.svg?style=svg)](https://circleci.com/gh/loitd/vue-quicktemplate)
 * Local Demo:
 ```bash
