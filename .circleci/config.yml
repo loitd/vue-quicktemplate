@@ -19,7 +19,7 @@ jobs:
           # Set codecov env vars (should be ignored if configured on web)
           - run:
               name: Codecov configurations
-              command: npm install -g codecov
+              command: npm install codecov
           # Upload file report to codecov to make codecov available
           - codecov/upload:
               token: "32209d29-b38e-4d97-a069-8e46cbc34276"
