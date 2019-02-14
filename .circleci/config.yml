@@ -18,7 +18,7 @@ jobs:
               command: echo ${CIRCLE_BRANCH}
           # Upload file report to codecov to make codecov available
           - codecov/upload:
-              file: {{ coverage_report_filepath }}
+              file: "{{ coverage_report_filepath }}"
           # Restore local dependencies from cache
           - restore_cache:
               keys:
