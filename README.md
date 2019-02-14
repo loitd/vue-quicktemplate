@@ -17,6 +17,12 @@ All for quick and handy start with Vue
 [![Package Quality](https://npm.packagequality.com/shield/vue-quick-template.svg)](https://packagequality.com/#?package=vue-quick-template)
 [![CircleCI](https://circleci.com/gh/loitd/vue-quicktemplate.svg?style=svg)](https://circleci.com/gh/loitd/vue-quicktemplate)
 [![codecov](https://codecov.io/gh/loitd/vue-quicktemplate/branch/master/graph/badge.svg)](https://codecov.io/gh/loitd/vue-quicktemplate)
+![](https://img.shields.io/npm/dt/vue-quick-template.svg?style=flat)
+![](https://img.shields.io/npm/dw/vue-quick-template.svg?style=flat)
+![](https://img.shields.io/npm/l/vue-quick-template.svg?style=flat)
+![](https://img.shields.io/npm/v/vue-quick-template.svg?style=flat)
+![](https://img.shields.io/node/v/vue-quick-template.svg?style=flat)
+![](https://img.shields.io/github/last-commit/loitd/vue-quicktemplate.svg?style=flat)
 * Local Demo:
 ```bash
 npm install -g serve
