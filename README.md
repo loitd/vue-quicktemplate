@@ -3,6 +3,7 @@ Vue.JS quick template with:
 * Mobile-first designed components: Navbar, Sidebar, ... 
 * Progressive Web Application (PWA) ready (see all capable of PWA compared to Natives: https://whatwebcando.today/), 
 * Very detail comments about all things (Readable code)
+* Intergrated with CircleCI, Codecov (with pre-running-configures)
 * Full of pluggins available by default With additional pluggins beside common ones (`babel`, `webpack`)
     * `vue@cli` version 3.4
     * `vuex`, 

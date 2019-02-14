@@ -16,18 +16,22 @@ jobs:
           - run:
               name: Show current branch
               command: echo ${CIRCLE_BRANCH}
+          # Upload file report to codecov to make codecov available
+          - codecov/upload:
+              file: {{ coverage_report_filepath }}
           # Restore local dependencies from cache
           - restore_cache:
               keys:
+              - v1-dependencies-{{ .Branch }}-{{ checksum "package.json" }}
               - v1-dependencies-{{ checksum "package.json" }}
               - v1-dependencies-
           # Install project dependencies
           - run:
               name: Install local dependencies
-              command: npm install
+              command: yarn install
           # Cache local dependencies if they don't exist
           - save_cache:
-              key: v1-dependencies-{{ checksum "package.json" }}
+              key: v1-dependencies-{{ .Branch }}-{{ checksum "package.json" }}
               paths:
                   - node_modules
           # Lint the source code
@@ -40,15 +44,12 @@ jobs:
               name: Building
               command: |
                   if [ "${CIRCLE_BRANCH}" == "staging" ]; then
-                      npm run build-qa
+                      yarn run build-qa
                   elif [ "${CIRCLE_BRANCH}" == "master" ]; then
-                      npm run build
+                      yarn run build
                   else
-                      npm run build-dev
+                      yarn run build-dev
                   fi
-          # Upload file report to codecov
-          - codecov/upload:
-              file: {{ coverage_report_filepath }}
           # Cache the dist folder for the deploy job. Finally, we save the dist folder into the cache so we can restore it later in the deploy job
           - save_cache:
               key: v1-dist-{{ .Environment.CIRCLE_BRANCH }}-{{ .Environment.CIRCLE_SHA1 }}
@@ -96,4 +97,4 @@ workflows:
     build_and_deploy:
         jobs:
             - build
-            - deploy
+            # - deploy
