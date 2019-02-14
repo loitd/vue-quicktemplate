@@ -16,6 +16,10 @@ jobs:
           - run:
               name: Show current branch
               command: echo ${CIRCLE_BRANCH}
+          # Set codecov env vars (should be ignored if configured on web)
+          - run:
+              name: Set Codecov ENV
+              command: export CODECOV_TOKEN="32209d29-b38e-4d97-a069-8e46cbc34276"
           # Upload file report to codecov to make codecov available
           - codecov/upload:
               file: "{{ coverage_report_filepath }}"

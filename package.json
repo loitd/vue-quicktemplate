@@ -27,11 +27,11 @@
     "node": ">=6"
   },
   "scripts": {
-    "serve"   : "vue-cli-service serve",
-    "build"   : "vue-cli-service build",
-    "lint"    : "vue-cli-service lint",
-    "deploy"  : "git add * && git commit -am 'deploy-minor-fixes' && git push origin master && npm run build && surge -d vqt.surge.sh dist",
-    "push"    : "git add * && git commit -am 'deploy-minor-fixes' && git push origin master"
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "deploy": "git add * && git commit -am 'deploy-minor-fixes' && git push origin master && npm run build && surge -d vqt.surge.sh dist",
+    "push": "git add * && git commit -am 'deploy-minor-fixes' && git push origin master"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.6",
@@ -53,6 +53,7 @@
     "@vue/cli-service": "^3.4.0",
     "axios": "^0.18.0",
     "babel-eslint": "^10.0.1",
+    "codecov": "^3.2.0",
     "eslint": "^5.8.0",
     "eslint-plugin-vue": "^5.0.0",
     "node-sass": "^4.9.0",
