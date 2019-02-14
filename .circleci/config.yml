@@ -21,7 +21,7 @@ jobs:
           - codecov/upload:
               token: "32209d29-b38e-4d97-a069-8e46cbc34276"
               upload_name: v1-codecov-report-{{ .Branch }}-{{ checksum "package.json" }}
-              file: {{ coverage_report_filepath }}
+              file: v1-codecov-report-{{ .Branch }}-{{ checksum "package.json" }}
           # Restore local dependencies from cache
           - restore_cache:
               keys:
