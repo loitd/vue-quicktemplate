@@ -12,6 +12,7 @@ Vue.JS quick template with:
     * `sass-loader`, 
     * `chartjs`,  
 All for quick and handy start with Vue  
+## Status
 [![Package Quality](https://npm.packagequality.com/shield/vue-quick-template.svg)](https://packagequality.com/#?package=vue-quick-template)
 [![CircleCI](https://circleci.com/gh/loitd/vue-quicktemplate.svg?style=svg)](https://circleci.com/gh/loitd/vue-quicktemplate)
 * Local Demo:
@@ -25,7 +26,7 @@ serve -s dist
 * Online Demo:  
     * https://vqt.surge.sh/#/
 
-## git related
+## Git related
 To pull from github to local
 ```
 git pull origin master --allow-unrelated-histories
