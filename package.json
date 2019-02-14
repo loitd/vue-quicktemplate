@@ -1,8 +1,31 @@
 {
   "name": "vue-quick-template",
-  "version": "0.1.0",
-  "author": "loitd",
-  "private": true,
+  "version": "1.0.1",
+  "license": "MIT",
+  "main": "index.js",
+  "keywords": [
+    "vue",
+    "vuejs",
+    "template",
+    "quick",
+    "starter",
+    "bootstrap"
+  ],
+  "author": {
+    "name": "Leo Tran",
+    "email": "loitranduc@gmail.com",
+    "web": "http://twitter.com/loitranduc"
+  },
+  "homepage": "http://oraerr.com",
+  "description": "All setup/plugins/configurations for quick and handy start with Vue",
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/loitd/vue-quicktemplate"
+  },
+  "engines": {
+    "node": ">=6"
+  },
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
@@ -13,6 +36,7 @@
     "@fortawesome/fontawesome-svg-core": "^1.2.6",
     "@fortawesome/free-solid-svg-icons": "^5.4.1",
     "@fortawesome/vue-fontawesome": "^0.1.1",
+    "bootstrap-vue": "^2.0.0-rc.11",
     "chart.js": "^2.7.3",
     "register-service-worker": "^1.5.2",
     "vue": "^2.5.22",

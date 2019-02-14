@@ -11,8 +11,8 @@ Vue.JS quick template with:
     * `fontawesome` for FontAwesome 5, 
     * `sass-loader`, 
     * `chartjs`, 
-\All for quick and handy start with Vue 
-Local Demo:
+All for quick and handy start with Vue 
+* Local Demo:
 ```bash
 npm install -g serve
 cd vue-quicktemplate
@@ -20,8 +20,8 @@ cd vue-quicktemplate
 # which deals with the routing problem below
 serve -s dist
 ```
-Online Demo:  
-* https://vqt.surge.sh/#/
+* Online Demo:  
+    * https://vqt.surge.sh/#/
 
 ## git related
 To pull from github to local
