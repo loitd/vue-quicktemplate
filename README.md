@@ -23,6 +23,15 @@ All for quick and handy start with Vue
 ![](https://img.shields.io/npm/v/vue-quick-template.svg?style=flat)
 ![](https://img.shields.io/node/v/vue-quick-template.svg?style=flat)
 ![](https://img.shields.io/github/last-commit/loitd/vue-quicktemplate.svg?style=flat)
+![](https://img.shields.io/npm/collaborators/vue-quick-template.svg?style=flat)
+![](https://img.shields.io/maintenance/yes/2019.svg?style=flat)
+![](https://img.shields.io/librariesio/dependents/npm/vue-quick-template.svg?style=flat)
+![](https://img.shields.io/github/issues/loitd/vue-quicktemplate.svg?style=flat)
+![](https://img.shields.io/github/issues-closed/loitd/vue-quicktemplate.svg?style=flat)
+![](https://img.shields.io/librariesio/release/npm/vue-quick-template.svg?style=flat)
+![](https://img.shields.io/github/languages/top/loitd/vue-quicktemplate.svg?style=flat)
+![](https://img.shields.io/snyk/vulnerabilities/npm/vue-quick-template.svg?style=flat)
+![](https://img.shields.io/github/repo-size/loitd/vue-quicktemplate.svg?style=flat)
 * Local Demo:
 ```bash
 npm install -g serve
