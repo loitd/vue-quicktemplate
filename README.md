@@ -16,6 +16,7 @@ All for quick and handy start with Vue
 ## Status
 [![Package Quality](https://npm.packagequality.com/shield/vue-quick-template.svg)](https://packagequality.com/#?package=vue-quick-template)
 [![CircleCI](https://circleci.com/gh/loitd/vue-quicktemplate.svg?style=svg)](https://circleci.com/gh/loitd/vue-quicktemplate)
+[![codecov](https://codecov.io/gh/loitd/vue-quicktemplate/branch/master/graph/badge.svg)](https://codecov.io/gh/loitd/vue-quicktemplate)
 * Local Demo:
 ```bash
 npm install -g serve
