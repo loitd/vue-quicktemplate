@@ -1,6 +1,6 @@
 {
   "name": "vue-quick-template",
-  "version": "0.1.0",
+  "version": "1.0.3",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
@@ -48,5 +48,27 @@
     "vue-cli-plugin-fontawesome": "^0.1.0",
     "vue-octicons": "^0.1.9",
     "vue-template-compiler": "^2.5.21"
+  },
+  "homepage": "http://oraerr.com",
+  "keywords": [
+    "vue",
+    "vuejs",
+    "template",
+    "quick",
+    "starter",
+    "bootstrap"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/loitd/vue-quicktemplate"
+  },
+  "private": false,
+  "description": "All setup/plugins/configurations for quick and handy start with Vue",
+  "author": {
+    "name": "Leo Tran",
+    "email": "loitranduc@gmail.com",
+    "web": "http://twitter.com/loitranduc"
   }
 }

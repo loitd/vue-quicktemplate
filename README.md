@@ -1,5 +1,5 @@
 # vue-quick-template
-Vue.JS quick template with:
+Vue.JS quick template with all for quick and handy start:
 * Mobile-first designed components: Navbar, Sidebar, ... 
 * Progressive Web Application (PWA) ready (see all capable of PWA compared to Natives: https://whatwebcando.today/), 
 * Very detail comments about all things (Readable code)
@@ -14,7 +14,7 @@ Vue.JS quick template with:
     * `sass-loader`, 
     * `chartjs`,  
     * Unit test with `jest`, E2E test with `nightwatch`,
-All for quick and handy start with Vue  
+
 ## Status
 [![Package Quality](https://npm.packagequality.com/shield/vue-quick-template.svg)](https://packagequality.com/#?package=vue-quick-template)
 [![CircleCI](https://circleci.com/gh/loitd/vue-quick-template.svg?style=svg)](https://circleci.com/gh/loitd/vue-quick-template)
