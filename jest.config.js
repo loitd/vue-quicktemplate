@@ -1,4 +1,6 @@
 module.exports = {
+  "coverageDirectory": "./.coverage/",
+  "collectCoverage": true,
   moduleFileExtensions: ["js", "jsx", "json", "vue"],
   transform: {
     "^.+\\.vue$": "vue-jest",
