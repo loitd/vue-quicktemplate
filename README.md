@@ -15,27 +15,27 @@ Vue.JS quick template with:
 All for quick and handy start with Vue  
 ## Status
 [![Package Quality](https://npm.packagequality.com/shield/vue-quick-template.svg)](https://packagequality.com/#?package=vue-quick-template)
-[![CircleCI](https://circleci.com/gh/loitd/vue-quicktemplate.svg?style=svg)](https://circleci.com/gh/loitd/vue-quicktemplate)
-[![codecov](https://codecov.io/gh/loitd/vue-quicktemplate/branch/master/graph/badge.svg)](https://codecov.io/gh/loitd/vue-quicktemplate)
+[![CircleCI](https://circleci.com/gh/loitd/vue-quick-template.svg?style=svg)](https://circleci.com/gh/loitd/vue-quick-template)
+[![codecov](https://codecov.io/gh/loitd/vue-quick-template/branch/master/graph/badge.svg)](https://codecov.io/gh/loitd/vue-quick-template)
 ![](https://img.shields.io/npm/dt/vue-quick-template.svg?style=flat)
 ![](https://img.shields.io/npm/dw/vue-quick-template.svg?style=flat)
 ![](https://img.shields.io/npm/l/vue-quick-template.svg?style=flat)
 ![](https://img.shields.io/npm/v/vue-quick-template.svg?style=flat)
 ![](https://img.shields.io/node/v/vue-quick-template.svg?style=flat)
-![](https://img.shields.io/github/last-commit/loitd/vue-quicktemplate.svg?style=flat)
+![](https://img.shields.io/github/last-commit/loitd/vue-quick-template.svg?style=flat)
 ![](https://img.shields.io/npm/collaborators/vue-quick-template.svg?style=flat)
 ![](https://img.shields.io/maintenance/yes/2019.svg?style=flat)
 ![](https://img.shields.io/librariesio/dependents/npm/vue-quick-template.svg?style=flat)
-![](https://img.shields.io/github/issues/loitd/vue-quicktemplate.svg?style=flat)
-![](https://img.shields.io/github/issues-closed/loitd/vue-quicktemplate.svg?style=flat)
+![](https://img.shields.io/github/issues/loitd/vue-quick-template.svg?style=flat)
+![](https://img.shields.io/github/issues-closed/loitd/vue-quick-template.svg?style=flat)
 ![](https://img.shields.io/librariesio/release/npm/vue-quick-template.svg?style=flat)
-![](https://img.shields.io/github/languages/top/loitd/vue-quicktemplate.svg?style=flat)
+![](https://img.shields.io/github/languages/top/loitd/vue-quick-template.svg?style=flat)
 ![](https://img.shields.io/snyk/vulnerabilities/npm/vue-quick-template.svg?style=flat)
-![](https://img.shields.io/github/repo-size/loitd/vue-quicktemplate.svg?style=flat)
+![](https://img.shields.io/github/repo-size/loitd/vue-quick-template.svg?style=flat)
 * Local Demo:
 ```bash
 npm install -g serve
-cd vue-quicktemplate
+cd vue-quick-template
 # -s flag means serve it in Single-Page Application mode
 # which deals with the routing problem below
 serve -s dist
