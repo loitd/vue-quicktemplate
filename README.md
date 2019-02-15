@@ -8,6 +8,7 @@ Vue.JS quick template with all for quick and handy start:
     * `vue@cli` version 3.4
     * `vuex`, 
     * `vue-router`, 
+    * `@babel/preset-env` (version 7) fixed some troubles from default babel preset 6 or babel preset 2015
     * `bootstrap-vue` for Bootstrap 4, 
     * preconfigued `fontawesome` for FontAwesome 5,
     * `octicons` replacement fro FontAwesome 5 for a lightweight product 

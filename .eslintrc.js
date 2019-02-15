@@ -12,6 +12,11 @@ module.exports = {
     "no-unused-vars": ["error", { vars: "all", args: "none" }]
   },
   parserOptions: {
-    parser: "babel-eslint"
-  }
+    parser: "babel-eslint",
+    // https://eslint.org/docs/user-guide/configuring#specifying-parser-options
+    // Need this config for ignore error while run test
+    "ecmaVersion": 6,
+    sourceType: "module",
+    allowImportExportEverywhere: true
+  },
 };

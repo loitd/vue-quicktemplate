@@ -1,7 +1,7 @@
 {
   "name": "vue-quick-template",
   "version": "1.0.3",
-  "private": true,
+  "private": false,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
@@ -10,9 +10,11 @@
     "test:unit": "vue-cli-service test:unit",
     "deploy": "git add * && git commit -am 'deploy-minor-fixes' && git push origin master && npm run build && surge -d vqt.surge.sh dist",
     "cov": "vue-cli-service test:unit && codecov -t 8745803a-9b0b-4ce4-8e3c-d3e3777b0d15",
+    "cov2": "jest --coverage",
     "push": "git add * && git commit -am 'deploy-minor-fixes' && git push origin master"
   },
   "dependencies": {
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
     "@fortawesome/fontawesome-svg-core": "^1.2.6",
     "@fortawesome/free-solid-svg-icons": "^5.4.1",
     "@fortawesome/vue-fontawesome": "^0.1.1",
@@ -26,6 +28,8 @@
   },
   "devDependencies": {
     "@babel/polyfill": "^7.0.0-beta.53",
+    "@babel/preset-env": "^7.3.1",
+    "@babel/preset-es2015": "^7.0.0-beta.53",
     "@vue/cli-plugin-babel": "^3.4.0",
     "@vue/cli-plugin-e2e-nightwatch": "^3.4.0",
     "@vue/cli-plugin-eslint": "^3.4.0",
@@ -62,9 +66,8 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/loitd/vue-quicktemplate"
+    "url": "https://github.com/loitd/vue-quick-template"
   },
-  "private": false,
   "description": "All setup/plugins/configurations for quick and handy start with Vue",
   "author": {
     "name": "Leo Tran",
