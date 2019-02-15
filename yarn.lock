@@ -7469,6 +7469,11 @@ obuf@^1.0.0, obuf@^1.1.2:
   resolved "https://registry.yarnpkg.com/obuf/-/obuf-1.1.2.tgz#09bea3343d41859ebd446292d11c9d4db619084e"
   integrity sha512-PX1wu0AmAdPqOL1mWhqmlOd8kOIZQwGZw6rh7uby9fTc5lhaOWFLX3I6R1hrF9k3zUY40e6igsLGkDXK92LJNg==
 
+octicons@^5.0.1:
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/octicons/-/octicons-5.0.1.tgz#0fa0c4fd3680d251266f073736539317cb846e4f"
+  integrity sha1-D6DE/TaA0lEmbwc3NlOTF8uEbk8=
+
 on-finished@~2.3.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/on-finished/-/on-finished-2.3.0.tgz#20f1336481b083cd75337992a16971aa2d906947"
@@ -10388,6 +10393,13 @@ vue-loader@^15.6.2:
     loader-utils "^1.1.0"
     vue-hot-reload-api "^2.3.0"
     vue-style-loader "^4.1.0"
+
+vue-octicons@^0.1.9:
+  version "0.1.9"
+  resolved "https://registry.yarnpkg.com/vue-octicons/-/vue-octicons-0.1.9.tgz#4bdb1b4b0a608bd2e98d7f655c201065cd43093a"
+  integrity sha512-I+E6+vu0LUKV7rxXFZevwzBkX2NW1ldFZ4qdfa0Efag8YcBy0T/hhLI67QISqeNMcLc/kCSSCeiL3ZgLIp9z5g==
+  dependencies:
+    octicons "^5.0.1"
 
 vue-router@^3.0.1:
   version "3.0.2"
