@@ -7,8 +7,8 @@ env:
   global:
     - SECRET_TOKEN=k399dkkgklsk
   matrix:
-    - DB=production
-    - DB=testing
+    - ENV=production
+    - ENV=testing
 
 language: node_js
 node_js: 
@@ -35,7 +35,7 @@ services:
 # http://docs.travis-ci.com/user/installing-dependencies/
 before_install:
   - sudo apt-get update -qq
-  - npm i-g yarn
+  - npm i -g yarn
 
 # The install block is used to set up the dependencies of your build. 
 # It’s where things like npm install and bundle install get run. The official docs has more on this as well.
@@ -47,17 +47,20 @@ install:
 # This block is used to further set up your environment before you run your script. 
 # If you need to copy files, start your database, or declare environment variables, do that here:
 before_script:
-  - cd example
+  - pwd
 
 # This is the step where Travis runs your test script. Unless otherwise specified, it runs the default for the set language. 
 # In the case of node, it does npm test
 script:
-  - yarn lint
+  # - yarn lint
   - yarn cov
 
 # If you’re using a git push to deploy your repo to a server, you want to do it in the after_success portion.
 # The deployment portion is used to deploy to specific, supported hosts, like S3, Heroku, or GitHub Releases.
-# after_success/after_failure
+after_success
+  - yarn deploy-surge
+  - yarn deploy-github
+# after_failure
 
 # The after script block runs after the entire script is done. It’s the last step in the “normal” build process.
 # after_script
@@ -74,9 +77,9 @@ script:
 # after_deploy
   # - ssh git@mysite.biz "./deploy.sh $TRAVIS_BRANCH"
 
-jobs:
-  include:
-    - stage: Release
-    if: branch = master AND type = push
-    node_js: node
-    script: yarn build
+# jobs:
+#   include:
+#     - stage: Release
+#     if: branch = master AND type = push
+#     node_js: node
+#     script: yarn build
