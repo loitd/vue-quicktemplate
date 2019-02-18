@@ -1,17 +1,16 @@
 dist: xenial
 sudo: required
+language: node_js
+node_js: 
+  - "10"
+  - "9"
+  - "stable"
 env:
   global:
     - SECRET_TOKEN=k399dkkgklsk
   matrix:
     - ENV=production
     - ENV=testing
-
-language: node_js
-node_js: 
-  - "10"
-  - "9"
-  - "stable"
 branches:
   except:
     - test
