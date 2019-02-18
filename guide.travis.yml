@@ -1,0 +1,85 @@
+dist: xenial
+
+# Specify language and language options
+# If we specify two NODE_ENV versions, and add in four versions of node to test, we wind up with a total of 8 possible combinations, all of which Travis will build and test.
+# Likewise, if we wanted to declare certain environment variables to be used across all builds, we could declare it as a global, and change the others to matrix
+env:
+  global:
+    - SECRET_TOKEN=k399dkkgklsk
+  matrix:
+    - ENV=production
+    - ENV=testing
+
+language: node_js
+node_js: 
+  - "10"
+  - "9"
+  - "stable"
+# Specify branches torun
+branches:
+  except:
+    - test
+# Cache
+cache: 
+  yarn: true
+  directories: 
+    - node_modules
+    - ~/.npm
+    - ~/.cache
+# # enable various services
+services:
+  - mysql
+
+# Begin build steps
+# Use the before_install to do things like set up prerequisites for installing dependencies that you need for you build.
+# http://docs.travis-ci.com/user/installing-dependencies/
+before_install:
+  - sudo apt-get update -qq
+  - npm i -g yarn
+
+# The install block is used to set up the dependencies of your build. 
+# It’s where things like npm install and bundle install get run. The official docs has more on this as well.
+install:
+  # - wget https://github.com/n1k0/casperjs/archive/1.0.2.tar.gz -O /tmp/casper.tar.gz
+  # - tar -xvf /tmp/casper.tar.gz
+  - yarn install
+
+# This block is used to further set up your environment before you run your script. 
+# If you need to copy files, start your database, or declare environment variables, do that here:
+before_script:
+  - pwd
+
+# This is the step where Travis runs your test script. Unless otherwise specified, it runs the default for the set language. 
+# In the case of node, it does npm test
+script:
+  # - yarn lint
+  - yarn cov
+
+# If you’re using a git push to deploy your repo to a server, you want to do it in the after_success portion.
+# The deployment portion is used to deploy to specific, supported hosts, like S3, Heroku, or GitHub Releases.
+after_success
+  - yarn deploy-surge
+  - yarn deploy-github
+# after_failure
+
+# The after script block runs after the entire script is done. It’s the last step in the “normal” build process.
+# after_script
+
+# The before_deploy can be used to prepare your deployment, if need be.
+# If you want to make sure that this only runs if your build was successful, you can check the $TRAVIS_TEST_RESULT environment variable.
+# before_deploy
+
+# deploy is used to deploy your build via travis-supported deployment providers. For a list of deployment providers that supported by Travis-CI, check out the official documentation
+# deploy
+
+# The after_deploy block rus after the Travis deploy block has run. Note that in the case of GitHub releases, our code technically hasn’t deployed to the server yet 
+# (it’s just been uploaded to the releases page), so we can tell our server to download that release here.
+# after_deploy
+  # - ssh git@mysite.biz "./deploy.sh $TRAVIS_BRANCH"
+
+# jobs:
+#   include:
+#     - stage: Release
+#     if: branch = master AND type = push
+#     node_js: node
+#     script: yarn build
