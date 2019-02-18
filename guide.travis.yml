@@ -57,10 +57,10 @@ script:
 
 # If you’re using a git push to deploy your repo to a server, you want to do it in the after_success portion.
 # The deployment portion is used to deploy to specific, supported hosts, like S3, Heroku, or GitHub Releases.
-after_success
+after_success:
   - yarn deploy-surge
   - yarn deploy-github
-# after_failure
+# after_failure:
 
 # The after script block runs after the entire script is done. It’s the last step in the “normal” build process.
 # after_script

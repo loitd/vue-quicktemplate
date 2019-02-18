@@ -31,7 +31,7 @@ before_script:
   - pwd
 script:
   - yarn cov
-after_success
+after_success:
   - yarn deploy-surge
   - yarn deploy-github
 notifications:
