@@ -19,7 +19,7 @@ Vue.JS quick template with all for quick and handy start:
 
 ## Status
 [![Package Quality](https://npm.packagequality.com/shield/vue-quick-template.svg)](https://packagequality.com/#?package=vue-quick-template)
-![](https://img.shields.io/travis/loitd/vue-quick-template/master.svg?style=flat)
+[![Build Status](https://travis-ci.org/loitd/vue-quick-template.svg?branch=master)](https://travis-ci.org/loitd/vue-quick-template)
 [![CircleCI](https://circleci.com/gh/loitd/vue-quick-template.svg?style=svg)](https://circleci.com/gh/loitd/vue-quick-template)
 [![codecov](https://codecov.io/gh/loitd/vue-quick-template/branch/master/graph/badge.svg)](https://codecov.io/gh/loitd/vue-quick-template)
 ![](https://img.shields.io/npm/dt/vue-quick-template.svg?style=flat)
