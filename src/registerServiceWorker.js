@@ -4,7 +4,9 @@ import { register } from "register-service-worker";
 
 if (process.env.NODE_ENV === "production") {
   register(`${process.env.BASE_URL}service-worker.js`, {
-    scope: '/',
+    // https://www.npmjs.com/package/register-service-worker
+    // Is a must to configure scope since it related to deploy problem to any kind of domain.com/subfix
+    registrationOptions: { scope: './' },
     ready() {
       console.log(
         "App is being served from cache by a service worker.\n" +

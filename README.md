@@ -37,8 +37,9 @@ Vue.JS quick template with all for quick and handy start:
 ![](https://img.shields.io/github/languages/top/loitd/vue-quick-template.svg?style=flat)
 ![](https://img.shields.io/snyk/vulnerabilities/npm/vue-quick-template.svg?style=flat)
 ![](https://img.shields.io/github/repo-size/loitd/vue-quick-template.svg?style=flat)
-* Use Guide
+## Use Guide
 
+## Demos
 * Local Demo:
 ```bash
 git clone https://github.com/loitd/vue-quick-template
@@ -94,3 +95,10 @@ yarn run test:unit
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+## Author
+<a href="https://sourcerer.io/loitd"><img src="https://avatars2.githubusercontent.com/u/444086?v=4" height="50px" width="50px" alt=""/></a>
+<a  href="https://sourcerer.io/loitd"><img  src="https://img.shields.io/badge/JavaScript-11%20commits-orange.svg"  alt=""></a>
+<a href="https://sourcerer.io/loitd"><img src="https://img.shields.io/badge/Python-1%20commits-orange.svg" alt=""></a>
+<a href="https://sourcerer.io/loitd"><img src="https://img.shields.io/badge/CSS-11%20commits-orange.svg" alt=""></a>
+<a href="https://sourcerer.io/loitd"><img src="https://img.shields.io/badge/PHP-13%20commits-orange.svg" alt=""></a>
+<a href="https://sourcerer.io/loitd"><img src="https://img.shields.io/badge/Shell-1%20commits-orange.svg" alt=""></a>
