@@ -4,19 +4,19 @@ self.__precacheManifest = [
     "url": "/vue-quick-template/robots.txt"
   },
   {
-    "revision": "76f5886a54eed771b7fe",
-    "url": "/vue-quick-template/js/chunk-vendors.acc7268e.js"
+    "revision": "4e419950dab290c3a06a",
+    "url": "/vue-quick-template/js/chunk-vendors.35caa999.js"
   },
   {
-    "revision": "514920fb4461e1e99a1f",
-    "url": "/vue-quick-template/js/app.232827cc.js"
+    "revision": "f6f2e775fc4ac8921016",
+    "url": "/vue-quick-template/js/app.c5e65f4f.js"
   },
   {
-    "revision": "a0a0cbbf220f84b72a59",
-    "url": "/vue-quick-template/js/about.0b66fc5d.js"
+    "revision": "86f3444bd52d19cef6f0",
+    "url": "/vue-quick-template/js/about.389a6c3b.js"
   },
   {
-    "revision": "e8685145027ce468ffa58d2d478ec23d",
+    "revision": "687263c77794d36ba60e3dac68cac0dd",
     "url": "/vue-quick-template/index.html"
   },
   {
@@ -24,11 +24,11 @@ self.__precacheManifest = [
     "url": "/vue-quick-template/img/logo.82b9c7a5.png"
   },
   {
-    "revision": "76f5886a54eed771b7fe",
+    "revision": "4e419950dab290c3a06a",
     "url": "/vue-quick-template/css/chunk-vendors.339c76d9.css"
   },
   {
-    "revision": "514920fb4461e1e99a1f",
+    "revision": "f6f2e775fc4ac8921016",
     "url": "/vue-quick-template/css/app.55e2862e.css"
   }
 ];
