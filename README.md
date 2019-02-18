@@ -47,7 +47,8 @@ cd vue-quick-template
 serve -s dist
 ```
 * Online Demo:  
-    * https://vqt.surge.sh/#/
+    * https://vqt.surge.sh/
+    * https://loitd.github.io/vue-quick-template/
 
 ## Git related
 To pull from github to local
