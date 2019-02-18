@@ -8,11 +8,11 @@
     "lint": "vue-cli-service lint",
     "test:e2e": "vue-cli-service test:e2e",
     "test:unit": "vue-cli-service test:unit",
-    "deploy-surge": "git add * && git commit -am 'deploy-surge-minor-fixes' && git push origin master && npm run build && surge -d vqt.surge.sh dist",
-    "deploy-git": "npm run build && cd dist && git init && git add -A && git commit -am 'deploy-git' && git push -f https://github.com/loitd/vue-quick-template.git master:gh-pages",
     "cov": "vue-cli-service test:unit && codecov -t 8745803a-9b0b-4ce4-8e3c-d3e3777b0d15",
     "cov2": "jest --coverage",
-    "push": "git add * && git commit -am 'deploy-minor-fixes' && git push origin master"
+    "push": "git add * && git commit -am 'deploy-minor-fixes' && git push origin master",
+    "deploy-surge": "git add * && git commit -am 'deploy-surge-minor-fixes' && git push origin master && yarn build && surge -d vqt.surge.sh dist",
+    "deploy-git": "yarn build && cd dist && git init && git add -A && git commit -am 'deploy-git-minor-fixes' && git push -f https://github.com/loitd/vue-quick-template.git master:gh-pages"
   },
   "dependencies": {
     "@babel/plugin-syntax-dynamic-import": "^7.2.0",
