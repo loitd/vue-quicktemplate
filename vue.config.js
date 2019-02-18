@@ -5,5 +5,5 @@ module.exports = {
   },
   // NOTE: in publicPathinside the <> chars you have to put the name of your project. Specifically read here why.
   // https://cli.vuejs.org/config/#publicpath
-  publicPath: '<vue-quick-template>',
+  publicPath: 'vue-quick-template',
 };
