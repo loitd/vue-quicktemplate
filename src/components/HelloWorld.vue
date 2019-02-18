@@ -111,10 +111,16 @@
 </template>
 
 <script>
+console.log("really heavy test");
 export default {
   name: "HelloWorld",
   props: {
     msg: String
+  },
+  methods: {
+    test: function() {
+      console.log("inside function");
+    }
   }
 };
 </script>

@@ -1,6 +1,8 @@
 .DS_Store
 node_modules
-/dist
+# // Find and open the file .gitignore located in root directory of your project.Next, find and comment the line which has the text ‘/dist’.
+# // NOTE: this folder it’s ignored by default that’s why we have to comment it. --> for deploy on github
+# /dist
 
 # local env files
 .env.local

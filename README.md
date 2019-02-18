@@ -1,14 +1,14 @@
 # vue-quick-template
 Vue.JS quick template with all for quick and handy start:
-* Mobile-first designed components: Navbar, Sidebar, ... 
+* Mobile-first designed components/pages: Login, Simple CRUD, Navbar, Sidebar, ... 
 * Progressive Web Application (PWA) ready (see all capable of PWA compared to Natives: https://whatwebcando.today/), 
 * Very detail comments about all things (Readable code)
-* Preconfigured intergration with CircleCI, Codecov (with pre-running-configures)
+* Preconfigured intergration with `CircleCI`, `Codecov` (with pre-running-configures)
 * Full of pluggins available by default With additional pluggins beside common ones (`babel`, `webpack`)
     * `vue@cli` version 3.4
     * `vuex`, 
     * `vue-router`, 
-    * `@babel/preset-env` (version 7) fixed some troubles from default babel preset 6 or babel preset 2015
+    * `@babel/preset-env` (version 7) fixed some troubles from default preset 6 or preset 2015
     * `bootstrap-vue` for Bootstrap 4, 
     * preconfigued `fontawesome` for FontAwesome 5,
     * `octicons` replacement fro FontAwesome 5 for a lightweight product 
@@ -35,6 +35,8 @@ Vue.JS quick template with all for quick and handy start:
 ![](https://img.shields.io/github/languages/top/loitd/vue-quick-template.svg?style=flat)
 ![](https://img.shields.io/snyk/vulnerabilities/npm/vue-quick-template.svg?style=flat)
 ![](https://img.shields.io/github/repo-size/loitd/vue-quick-template.svg?style=flat)
+* Use Guide
+
 * Local Demo:
 ```bash
 git clone https://github.com/loitd/vue-quick-template
