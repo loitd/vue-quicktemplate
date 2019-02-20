@@ -3,8 +3,8 @@ Vue.JS quick template with all for quick and handy start:
 * Mobile-first designed components/pages: Login, Simple CRUD, Navbar, Sidebar, ... 
 * Progressive Web Application (PWA) ready (see all capable of PWA compared to Natives: https://whatwebcando.today/), 
 * Very detail comments about all things (Readable code)
-* Preconfigured intergration with `CircleCI`, `Codecov`, `Travis-CI` (with pre-running-configures)
-* Preconfigured scripts to deploy on `github.io` and `surge.sh`
+* Preconfigured intergration with `CircleCI`, `Codecov`, `Travis-CI` (with pre-running-configures). Right now this repo is using Travis but Circle CI is also preconfigured.
+* Preconfigured scripts to deploy on `github.io` and `surge.sh`. Modified register service to fix error: `The path of the provided scope ('/') is not under the max scope allowed ('/vue-quick-template/'). Adjust the scope, move the Service Worker script, or use the Service-Worker-Allowed HTTP header to allow the scope.` for domains like: `loitd.github.io/vue-quick-template` to make sure register service worker successfully.
 * Full of pluggins available by default With additional pluggins beside common ones (`babel`, `webpack`)
     * `vue@cli` version 3.4
     * `vuex`, 
@@ -12,10 +12,10 @@ Vue.JS quick template with all for quick and handy start:
     * `@babel/preset-env` (version 7) fixed some troubles from default preset 6 or preset 2015
     * `bootstrap-vue` for Bootstrap 4, 
     * preconfigued `fontawesome` for FontAwesome 5,
-    * `octicons` replacement fro FontAwesome 5 for a lightweight product 
+    * `octicons` v5.0.1 replacement fro FontAwesome 5 for a lightweight product. Added and configured, just use it.
     * `sass-loader`, 
     * `chartjs`,  
-    * Unit test with `jest`, E2E test with `nightwatch`,
+    * Unit test with `jest` with test coverage, E2E test with `nightwatch`,
 
 ## Status
 [![Package Quality](https://npm.packagequality.com/shield/vue-quick-template.svg)](https://packagequality.com/#?package=vue-quick-template)
@@ -38,7 +38,12 @@ Vue.JS quick template with all for quick and handy start:
 ![](https://img.shields.io/snyk/vulnerabilities/npm/vue-quick-template.svg?style=flat)
 ![](https://img.shields.io/github/repo-size/loitd/vue-quick-template.svg?style=flat)
 ## Use Guide
-
+### Bootstrap-vue
+* Add new demanded component into `src/plugins/bootstrap-vue.js`
+* Using components as described in this document: ![Bootstrap-vue documents](https://bootstrap-vue.js.org/docs/components/alert)
+### Octicons
+* Add/remove and reconfigure Octicons in `src/plugins/octicons.js`
+* 
 ## Demos
 * Local Demo:
 ```bash

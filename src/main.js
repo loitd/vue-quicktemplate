@@ -1,7 +1,7 @@
 import "@babel/polyfill";
 import Vue from "vue";
-// import './plugins/fontawesome'
-import "./plugins/octicons";
+import './plugins/fontawesome'
+// import "./plugins/octicons";
 import "./plugins/axios";
 import "./plugins/bootstrap-vue";
 import App from "./App.vue";
