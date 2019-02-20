@@ -47,9 +47,13 @@
                 <span class="vqtCaretButton ml-auto"><font-awesome-icon :icon="['fas', 'angle-down']" /></span>
             </b-list-group-item>
             <b-collapse id="vqtSideBarAccordion1" class="vqtSideBarAccordion">
+                <b-list-group-item to="/login" class="vqtSidebarItem vqtSidebarItemHidden">
+                    <span class="vqtSidebarItemIcon"><font-awesome-icon :icon="['fas', 'sign-in-alt']" /></span>
+                    <span class="vqtSidebarItemText">Login</span>
+                </b-list-group-item>
                 <b-list-group-item href="#" class="vqtSidebarItem vqtSidebarItemHidden">
                     <span class="vqtSidebarItemIcon"><font-awesome-icon :icon="['fas', 'sign-out-alt']" /></span>
-                    <span class="vqtSidebarItemText">Sign out</span>
+                    <span class="vqtSidebarItemText">Logout</span>
                 </b-list-group-item>
             </b-collapse>
             <!-- Items with Accordion feature -->

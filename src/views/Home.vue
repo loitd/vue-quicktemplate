@@ -2,8 +2,8 @@
   <div class="home">
     <!-- <img alt="Vue logo" src="../assets/logo.png" />
     <HelloWorld msg="Welcome to Your Vue.js Quick Template App" /> -->
-    <BigTable />
-    <!-- <b-container fluid>
+  
+    <b-container fluid>
       <b-row>
         <b-col sm="4" md="3" id="pageSidebar">
           <Sidebar />
@@ -11,11 +11,13 @@
         <b-col sm="8" md="9">
           <Navbar />
           <div id="pageContent">
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis vel, at ducimus repudiandae asperiores inventore reprehenderit, beatae modi voluptates ut quisquam, dolor dolore eos. Voluptas perspiciatis consectetur nostrum quod deleniti.</p>
+            <BigTable />
           </div>
+          <Footer />
         </b-col>
       </b-row>  
-    </b-container> -->
+    </b-container>
+
   </div>
 </template>
 
@@ -25,6 +27,7 @@ import HelloWorld from "@/components/HelloWorld.vue";
 import Navbar from "@/components/Navbar.vue";
 import Sidebar from "@/components/Sidebar.vue";
 import BigTable from "@/components/BigTable.vue";
+import Footer from "@/components/Footer.vue";
 
 export default {
   name: "home",
@@ -32,6 +35,7 @@ export default {
     Navbar,
     Sidebar,
     BigTable,
+    Footer,
   }
 };
 </script>
@@ -42,7 +46,8 @@ export default {
   }
 
   #pageContent {
-    background-color: aquamarine;
+    // Push footer / let footer stay at the bottom by define content height
+    min-height: calc(100vh - 128px);
   }
 </style>
 

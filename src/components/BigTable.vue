@@ -1,4 +1,6 @@
 <template>
+    <!-- This template is for a responsive, filtered, paginated, virtual column preconfigured, hovered, bordered, striped table style
+    This is a part of VQT (Vue Quick Template) project.-->
     <b-container fluid class="vqtBigTable">
         <b-table responsive caption-top class="vqtTable" show-empty
             :items="items" 
@@ -21,24 +23,24 @@
             <template slot="name" slot-scope="data">{{ data.item.first_name }} {{ data.item.last_name }}</template>
             <!-- A virtual custom formatted column -->
             <template slot="actions" slot-scope="row">
-                <b-button size="sm" @click="info(row.item, row.index, $event.target)" class="mr-1"  variant="primary">View</b-button>
-                <b-button size="sm" @click="row.toggleDetails"  variant="warning" class="mr-1" >{{ row.detailsShowing ? 'Hide' : 'Show' }} Edit</b-button>
-                <b-button size="sm" @click="info(row.item, row.index, $event.target)" class="mr-1" variant="danger">Delete</b-button>
+                <b-button size="sm" class="mr-1"  variant="primary">View</b-button>
+                <b-button size="sm" variant="warning" class="mr-1" >Edit</b-button>
+                <b-button size="sm" class="mr-1" variant="danger">Delete</b-button>
             </template>
         </b-table>
         <b-row class="vqtTableAdditionals my-1">
-            <b-col md="6" class="vqtTableFilter">
+            <b-col sm="12" md="6" class="vqtTableFilter">
                 <b-input-group>
                     <!-- Define a v-model named filter here -> a binding filter variable/prop to the inputbox available now -->
-                    <b-form-input size="sm" type="text" v-model="filter" placeholder="Type to Search" />
+                    <b-form-input size="sm" type="text" v-model="filter" placeholder="Type to filter" />
                     <!-- Append button -->
                     <b-input-group-append>
                     <b-button size="sm" :disabled="!filter" @click="filter = ''">Clear</b-button>
                     </b-input-group-append>
                 </b-input-group>
             </b-col>
-            <b-col md="6" class="vqtTablePagination">
-                <b-alert class="vqtTableStatus" show variant="light"></b-alert>
+            <b-col sm="12" md="6" class="vqtTablePagination">
+                <!-- <b-alert class="vqtTableStatus" show variant="secondary"></b-alert> -->
                 <b-pagination size="sm" class="ml-auto" :total-rows="totalRows" v-model="currentPage" :per-page="perPage" />
             </b-col>
         </b-row>
@@ -65,7 +67,7 @@ export default {
             'first_name', 
             'last_name', 
             {key: 'age', sortable: true},
-            {key: 'actions', label: 'Actions', sortable: true},
+            {key: 'actions', label: 'Actions'},
         ],
         items: items,
         striped: true,

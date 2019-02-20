@@ -19,8 +19,10 @@
                 <template slot="button-content">
                     <em><font-awesome-icon :icon="['fas', 'user']" /></em>
                 </template>
-                <b-dropdown-item href="#">My Profile</b-dropdown-item>
-                <b-dropdown-item href="#">Sign out</b-dropdown-item>
+                <b-dropdown-item href="#"><font-awesome-icon :icon="['fas', 'user']" class="mr-1" />My Profile</b-dropdown-item>
+                <b-dropdown-divider />
+                <b-dropdown-item to="/login"><font-awesome-icon :icon="['fas', 'sign-in-alt']" class="mr-1" />Login</b-dropdown-item>
+                <b-dropdown-item href="#"><font-awesome-icon :icon="['fas', 'sign-out-alt']" class="mr-1" />Logout</b-dropdown-item>
             </b-nav-item-dropdown>
         </b-navbar-nav>
     </b-navbar>
@@ -37,6 +39,8 @@ export default {
     .vqtNavbar {
         display: none;
         padding: 1rem 1rem;
+        min-height: 50px;
+        max-height: 60px;
     }
 
     // Mobile horizontal view, prefered vertical view and now need addidtional query for H-view

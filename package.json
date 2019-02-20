@@ -1,6 +1,6 @@
 {
   "name": "vue-quick-template",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "private": false,
   "scripts": {
     "serve": "vue-cli-service serve",
@@ -58,14 +58,14 @@
   },
   "homepage": "http://oraerr.com",
   "keywords": [
-    "vue",
+    "vue","vuex","vue-router","fontawesome",
     "vuejs",
     "template",
     "quick",
     "starter",
-    "bootstrap"
+    "bootstrap","bootstrap 5","responsive","pwa","continous deployment","continous integration"
   ],
-  "license": "MIT",
+  "license": "CC BY-NC-SA 4.0",
   "main": "index.js",
   "repository": {
     "type": "git",

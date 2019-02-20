@@ -11,16 +11,16 @@ import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 // Only import using icons
 import {faUser, faSearch, faChalkboard, faTable,
     faMapMarkerAlt, faBell,
-    faCoffee, faSignOutAlt, 
+    faCoffee, faSignOutAlt, faSignInAlt,
     faUsers, faExpandArrowsAlt,
-    faAngleDown } from "@fortawesome/free-solid-svg-icons";
+    faAngleDown, faHeart } from "@fortawesome/free-solid-svg-icons";
 import { faVaadin, faTypo3, faNutritionix } from "@fortawesome/free-brands-svg-icons";
 
 // Only import using icons
 library.add(faUser, faSearch, faVaadin, faChalkboard, 
     faTable, faTypo3, faNutritionix, faMapMarkerAlt, 
-    faBell, faCoffee, faSignOutAlt, faUsers, faExpandArrowsAlt,
-    faAngleDown);
+    faBell, faCoffee, faSignOutAlt, faSignInAlt, faUsers, faExpandArrowsAlt,
+    faAngleDown, faHeart);
 
 
 
