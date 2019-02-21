@@ -1,6 +1,6 @@
 # vue-quick-template
 Vue.JS quick template with all for quick and handy start:
-* Mobile-first designed components/pages: Login, Simple CRUD, Navbar, Sidebar, ... 
+* Mobile-first designed components/pages: Login, Simple CRUD, Navbar, Sidebar, Google Authentication, ... 
 * Progressive Web Application (PWA) ready (see all capable of PWA compared to Natives: https://whatwebcando.today/), 
 * Very detail comments about all things (Readable code)
 * Preconfigured intergration with `CircleCI`, `Codecov`, `Travis-CI` (with pre-running-configures). Right now this repo is using Travis but Circle CI is also preconfigured.
@@ -56,7 +56,6 @@ cd vue-quick-template
 serve -s dist
 ```
 * Online Demo:  
-    * https://vqt.surge.sh/
     * https://loitd.github.io/vue-quick-template/
 
 ## Git related
