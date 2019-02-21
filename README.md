@@ -5,6 +5,7 @@ Vue.JS quick template with all for quick and handy start:
 * Very detail comments about all things (Readable code)
 * Preconfigured intergration with `CircleCI`, `Codecov`, `Travis-CI` (with pre-running-configures). Right now this repo is using Travis but Circle CI is also preconfigured.
 * Preconfigured scripts to deploy on `github.io` and `surge.sh`. Modified register service to fix error: `The path of the provided scope ('/') is not under the max scope allowed ('/vue-quick-template/'). Adjust the scope, move the Service Worker script, or use the Service-Worker-Allowed HTTP header to allow the scope.` for domains like: `loitd.github.io/vue-quick-template` to make sure register service worker successfully.
+* Social authentication with Google (`vue-google-oauth`)
 * Full of pluggins available by default With additional pluggins beside common ones (`babel`, `webpack`)
     * `vue@cli` version 3.4
     * `vuex`, 

@@ -58,12 +58,20 @@
   },
   "homepage": "http://oraerr.com",
   "keywords": [
-    "vue","vuex","vue-router","fontawesome",
+    "vue",
+    "vuex",
+    "vue-router",
+    "fontawesome",
     "vuejs",
     "template",
     "quick",
     "starter",
-    "bootstrap","bootstrap 5","responsive","pwa","continous deployment","continous integration"
+    "bootstrap",
+    "bootstrap 5",
+    "responsive",
+    "pwa",
+    "continous deployment",
+    "continous integration"
   ],
   "license": "CC BY-NC-SA 4.0",
   "main": "index.js",
