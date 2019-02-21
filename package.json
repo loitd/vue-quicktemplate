@@ -28,9 +28,9 @@
     "vuex": "^3.0.1"
   },
   "devDependencies": {
+    "@babel/core": "7.3.3",
     "@babel/polyfill": "^7.0.0-beta.53",
     "@babel/preset-env": "^7.3.1",
-    "@babel/preset-es2015": "^7.0.0-beta.53",
     "@fortawesome/free-brands-svg-icons": "^5.7.2",
     "@vue/cli-plugin-babel": "^3.4.0",
     "@vue/cli-plugin-e2e-nightwatch": "^3.4.0",
@@ -41,7 +41,6 @@
     "@vue/eslint-config-prettier": "^4.0.1",
     "@vue/test-utils": "^1.0.0-beta.20",
     "axios": "^0.18.0",
-    "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "^10.0.1",
     "babel-jest": "^23.6.0",
     "codecov": "^3.2.0",
@@ -53,7 +52,7 @@
     "vue-cli-plugin-axios": "^0.0.4",
     "vue-cli-plugin-bootstrap-vue": "^0.1.0",
     "vue-cli-plugin-fontawesome": "^0.1.0",
-    "vue-octicons": "^0.1.9",
+    "vue-google-oauth": "^1.0.5",
     "vue-template-compiler": "^2.5.21"
   },
   "homepage": "http://oraerr.com",

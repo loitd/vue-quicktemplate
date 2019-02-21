@@ -6,15 +6,15 @@ Vue.JS quick template with all for quick and handy start:
 * Preconfigured intergration with `CircleCI`, `Codecov`, `Travis-CI` (with pre-running-configures). Right now this repo is using Travis but Circle CI is also preconfigured.
 * Preconfigured scripts to deploy on `github.io` and `surge.sh`. Modified register service to fix error: `The path of the provided scope ('/') is not under the max scope allowed ('/vue-quick-template/'). Adjust the scope, move the Service Worker script, or use the Service-Worker-Allowed HTTP header to allow the scope.` for domains like: `loitd.github.io/vue-quick-template` to make sure register service worker successfully.
 * Social authentication with Google (`vue-google-oauth`)
-* Full of pluggins available by default With additional pluggins beside common ones (`babel`, `webpack`)
-    * `vue@cli` version 3.4
-    * `vuex`, 
-    * `vue-router`, 
+* Full of pluggins available by default With additional pluggins beside common ones:
+    * `@babel/core` lastest 7.3.3 instead of old default `babel-core` version 7.0.0-bridge.0
+    * `vue@cli` v3.4
+    * `vuex` v3.0.1
+    * `vue-router` v3.0.1 
     * `@babel/preset-env` (version 7) fixed some troubles from default preset 6 or preset 2015
     * `bootstrap-vue` for Bootstrap 4, 
     * preconfigued `fontawesome` for FontAwesome 5,
-    * `octicons` v5.0.1 replacement fro FontAwesome 5 for a lightweight product. Added and configured, just use it.
-    * `sass-loader`, 
+    * `sass-loader` and `node-sass` for scss pre-processing
     * `chartjs`,  
     * Unit test with `jest` with test coverage, E2E test with `nightwatch`,
 
@@ -99,8 +99,6 @@ yarn run test:e2e
 yarn run test:unit
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
 ## Author
 <a href="https://sourcerer.io/loitd"><img src="https://avatars2.githubusercontent.com/u/444086?v=4" height="50px" width="50px" alt=""/></a>
 <a  href="https://sourcerer.io/loitd"><img  src="https://img.shields.io/badge/JavaScript-11%20commits-orange.svg"  alt=""></a>
@@ -108,3 +106,6 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 <a href="https://sourcerer.io/loitd"><img src="https://img.shields.io/badge/CSS-11%20commits-orange.svg" alt=""></a>
 <a href="https://sourcerer.io/loitd"><img src="https://img.shields.io/badge/PHP-13%20commits-orange.svg" alt=""></a>
 <a href="https://sourcerer.io/loitd"><img src="https://img.shields.io/badge/Shell-1%20commits-orange.svg" alt=""></a>
+
+## License
+[![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
