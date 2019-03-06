@@ -1,10 +1,10 @@
 import "@babel/polyfill";
 import Vue from "vue";
-import './plugins/fontawesome'
+import './plugins/fontawesome';
 // import "./plugins/octicons";
 import "./plugins/axios";
 import "./plugins/bootstrap-vue";
-import "./plugins/oauthen";
+import "./plugins/google-oauth";
 import App from "./App.vue";
 import router from "./router";
 import store from "./store";

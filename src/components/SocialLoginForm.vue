@@ -9,14 +9,14 @@
                             <b-card-title><font-awesome-icon :icon="['fas', 'users']" class="fa-2x"/></b-card-title>
                             <!-- Google login button -->
                             <b-form-group>
-                                <b-button type="submit" variant="danger" @click="signIn"  style="min-width: 15rem;">
+                                <b-button type="submit" variant="danger" @click="directSignIn"  style="min-width: 15rem;">
                                     <font-awesome-icon :icon="['fab', 'google']" class="mr-1"/>
                                     Continue with Google
                                 </b-button>
                             </b-form-group>
                             <!-- Github login button -->
                             <b-form-group>
-                                <b-button type="submit" variant="" @click="signIn" style="min-width: 15rem;">
+                                <b-button type="submit" variant="" @click="authenticate('github')" style="min-width: 15rem;">
                                     <font-awesome-icon :icon="['fab', 'github']" class="mr-1"/>
                                     Continue with Github
                                 </b-button>
@@ -63,8 +63,31 @@ export default {
             }, function (error) {
                 // things to do when sign-in fails
                 // Sample response: {error: "popup_closed_by_user"}
+                // Sample: Object error: "access_denied" __proto__:
                 console.log("Something went wrong!");
                 console.log(error);
+            });
+        },
+        directSignIn: function(event){
+            event.preventDefault();
+            // Allow directaccess to get right in Vue
+            Vue.googleAuth().directAccess();
+            // Now sign in
+            Vue.googleAuth().signIn(function (googleUser){
+                // when sighn in success
+                console.log(googleUser);
+            }, function(error){
+                // when sign in error
+                console.log(error)
+            });
+        },
+        signOut: function (event) {
+            event.preventDefault();
+            console.log("Begin google sign out");
+            Vue.googleAuth().signOut(function(){
+                //when sign out ok
+            }, function(error){
+                //when sign out fails
             });
         },
     }
