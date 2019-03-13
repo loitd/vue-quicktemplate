@@ -14,13 +14,13 @@ import {faUser, faSearch, faChalkboard, faTable,
     faCoffee, faSignOutAlt, faSignInAlt,
     faUsers, faExpandArrowsAlt,
     faAngleDown, faHeart } from "@fortawesome/free-solid-svg-icons";
-import { faVaadin, faTypo3, faNutritionix, faGoogle, faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faVaadin, faTypo3, faNutritionix, faGoogle, faGithub, faFacebookF } from "@fortawesome/free-brands-svg-icons";
 
 // Only import using icons
 library.add(faUser, faSearch, faVaadin, faChalkboard, 
     faTable, faTypo3, faNutritionix, faMapMarkerAlt, 
     faBell, faCoffee, faSignOutAlt, faSignInAlt, faUsers, faExpandArrowsAlt,
-    faAngleDown, faHeart, faGoogle, faGithub);
+    faAngleDown, faHeart, faGoogle, faGithub, faFacebookF);
 
 
 

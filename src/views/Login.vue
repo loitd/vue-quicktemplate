@@ -1,3 +1,4 @@
+/* eslint-disable */
 <template>
     <div class="vqtLoginPage wrapper">
         <div class="content">
@@ -9,13 +10,16 @@
 
 <script>
 // @ is an alias to /src
-import LoginForm from "@/components/LoginForm.vue";
+// import LoginForm from "@/components/LoginForm.vue";
 import SocialLoginForm from "@/components/SocialLoginForm.vue";
+
+// 
+// console.log("We got token: ", Vue.$router.query.access_token);
 
 export default {
     name: "login",
     components: {
-        LoginForm,
+        // LoginForm,
         SocialLoginForm,
     }
 }

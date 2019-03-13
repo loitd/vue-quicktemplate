@@ -2,6 +2,7 @@ import Vue from "vue";
 import Router from "vue-router";
 import Home from "./views/Home.vue";
 import Login from "./views/Login.vue";
+import AuthGithub from "./views/AuthGithub.vue";
 
 Vue.use(Router);
 
@@ -15,9 +16,14 @@ export default new Router({
       component: Home
     },
     {
-      path: "/login",
+      path: "/auth/login",
       name: "login",
       component: Login
+    },
+    {
+      path: "/auth/callback/github",
+      name: "authGithubCallback",
+      component: AuthGithub
     },
     {
       path: "/about",

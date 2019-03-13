@@ -1,0 +1,29 @@
+{
+  "name": "vue-github-auth",
+  "version": "1.0.0",
+  "description": "Vue Github Authentication module made easy by @loitd",
+  "main": "index.js",
+  "scripts": {
+    "test": "\"exit 1\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/loitd/vue-github-auth.git"
+  },
+  "keywords": [
+    "vue",
+    "github",
+    "authentication",
+    "api",
+    "signin",
+    "login",
+    "signout",
+    "logout"
+  ],
+  "author": "Tran Duc Loi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/loitd/vue-github-auth/issues"
+  },
+  "homepage": "https://github.com/loitd/vue-github-auth#readme"
+}

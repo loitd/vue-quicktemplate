@@ -4,7 +4,7 @@ import './plugins/fontawesome';
 // import "./plugins/octicons";
 import "./plugins/axios";
 import "./plugins/bootstrap-vue";
-import "./plugins/google-oauth";
+import "./plugins/allauth";
 import App from "./App.vue";
 import router from "./router";
 import store from "./store";

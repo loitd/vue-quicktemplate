@@ -9,16 +9,16 @@
                             <b-card-title><font-awesome-icon :icon="['fas', 'users']" class="fa-2x"/></b-card-title>
                             <!-- Google login button -->
                             <b-form-group>
-                                <b-button type="submit" variant="danger" @click="directSignIn"  style="min-width: 15rem;">
+                                <b-button type="submit" variant="danger" @click="ggSignIn"  style="min-width: 15rem;">
                                     <font-awesome-icon :icon="['fab', 'google']" class="mr-1"/>
                                     Continue with Google
                                 </b-button>
                             </b-form-group>
                             <!-- Github login button -->
                             <b-form-group>
-                                <b-button type="submit" variant="" @click="authenticate('github')" style="min-width: 15rem;">
-                                    <font-awesome-icon :icon="['fab', 'github']" class="mr-1"/>
-                                    Continue with Github
+                                <b-button type="submit" variant="primary" @click="fbSignIn" style="min-width: 15rem;">
+                                    <font-awesome-icon :icon="['fab', 'facebook-f']" class="mr-1"/>
+                                    Continue with Facebook
                                 </b-button>
                             </b-form-group>
                             <!-- <b-button type="reset" variant="danger">Reset</b-button> -->
@@ -36,60 +36,56 @@
  *  All component javascript will be placed here
  * ----------------------------------------------------
  */
-// https://github.com/TinyNova/vue-google-oauth
 import Vue from "vue";
+// console.log("This is this outside export: "+this); //--> will be undefined
 export default {
     name: "SocialLoginForm",
-    // client ID: 504355047978-497p9005hhblmq9opgl7doc96hbjf16j.apps.googleusercontent.com
-    // client secret: IYI3-6iUABbR_rq1YZuTZElB
     data() {
       return {
-        
+        //   
       }
     },
     methods: {
-        signIn: function (event) {
-            event.preventDefault();
-            console.log("Begin google authentication!");
-            Vue.googleAuth().signIn(function (authorizationCode) {
-                // things to do when sign-in succeeds
-                // You can send the authorizationCode to your backend server for further processing, 
-                // Sample response: 4/-ABYX3-wfXTznLcS6prVHU5mqYbCsTvAbGKKtxw00k559VMVwLIC1Pt_L7Mmpt24bec3bJXpLH2MY1Eoh98Eg6g
-                console.log("Google authentication successfully!");
-                console.log(authorizationCode); 
-                // redirect to the dashboard
-                this.$router.push({ name: 'home' });
-
+        ggSignIn: function (event) {
+            // Prevent default action
+            event.preventDefault()
+            // console.log("Begin google authentication!");
+            Vue.allAuth().google().init()
+            // console.log("This is this before calling allAuth(): ");
+            // console.log(this); //--> at this time this is a Vue instance
+            // Assign that for accessing Vue object inside Vue.allAuth()
+            let that = this
+            Vue.allAuth().google().signIn(function (googleUser) {
+                // console.log("This is googleUser in SocialLoginForm: "+googleUser);
+                Vue.allAuth().google().printInfo() //just to check what you received
+                // console.log("This is this in SocialLoginForm: ");
+                // console.log(this); //--> at this time, this is undefined, that will be a Vue instance
+                that.$router.push("/")
             }, function (error) {
-                // things to do when sign-in fails
-                // Sample response: {error: "popup_closed_by_user"}
-                // Sample: Object error: "access_denied" __proto__:
                 console.log("Something went wrong!");
                 console.log(error);
-            });
-        },
-        directSignIn: function(event){
-            event.preventDefault();
-            // Allow directaccess to get right in Vue
-            Vue.googleAuth().directAccess();
-            // Now sign in
-            Vue.googleAuth().signIn(function (googleUser){
-                // when sighn in success
-                console.log(googleUser);
-            }, function(error){
-                // when sign in error
-                console.log(error)
-            });
+                // Vue.allAuth().printInfo();
+                // console.log(that.$router);
+            })
         },
         signOut: function (event) {
-            event.preventDefault();
-            console.log("Begin google sign out");
+            event.preventDefault()
+            console.log("Begin google sign out")
             Vue.googleAuth().signOut(function(){
                 //when sign out ok
             }, function(error){
                 //when sign out fails
-            });
+            })
         },
+        fbSignIn: function(event){
+            event.preventDefault();
+            Vue.allAuth().facebook().signIn(function(facebookUser){
+                console.log(facebookUser)
+            }, function(error){
+                console.log("Something went wrong!");
+                console.log(error);
+            })
+        }
     }
 }
 </script>

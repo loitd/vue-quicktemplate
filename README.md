@@ -63,9 +63,15 @@ To pull from github to local
 ```
 git pull origin master --allow-unrelated-histories
 ```
-## Project setup
+## Project setup (install global packages with npm make you dont have to add yarn to PATH)
 ```
+npm install yarn
+npm install -g @vue/cli
 yarn install
+```
+### Configure PUBLICPATH if need in vue.config.js
+```
+publicPath: process.env.NODE_ENV === "production" ? "/vue-quick-template/" : "/",
 ```
 
 ### Compiles and hot-reloads for development
@@ -81,6 +87,11 @@ yarn run build
 ### Run your tests
 ```
 yarn run test
+```
+
+### Run Vue UI
+```
+vue ui
 ```
 
 ### Lints and fixes files
