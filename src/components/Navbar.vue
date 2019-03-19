@@ -17,12 +17,14 @@
             <!-- profile -->
             <b-nav-item-dropdown right no-caret text="">
                 <template slot="button-content">
-                    <em><font-awesome-icon :icon="['fas', 'user']" /></em>
+                        <!-- check for user login or not and display here -->
+                        <img v-if="this.$store.getters.isAuthenticated" :src="this.$store.getters.getUserAvatar" class="useravatar"/>
+                        <em v-else><font-awesome-icon :icon="['fas', 'user']" /></em>
                 </template>
                 <b-dropdown-item href="#"><font-awesome-icon :icon="['fas', 'user']" class="mr-1" />My Profile</b-dropdown-item>
                 <b-dropdown-divider />
-                <b-dropdown-item to="/login"><font-awesome-icon :icon="['fas', 'sign-in-alt']" class="mr-1" />Login</b-dropdown-item>
-                <b-dropdown-item href="#"><font-awesome-icon :icon="['fas', 'sign-out-alt']" class="mr-1" />Logout</b-dropdown-item>
+                <b-dropdown-item to="/auth/login"><font-awesome-icon :icon="['fas', 'sign-in-alt']" class="mr-1" />Login</b-dropdown-item>
+                <b-dropdown-item href="/auth/logout"><font-awesome-icon :icon="['fas', 'sign-out-alt']" class="mr-1" />Logout</b-dropdown-item>
             </b-nav-item-dropdown>
         </b-navbar-nav>
     </b-navbar>
@@ -41,6 +43,11 @@ export default {
         padding: 1rem 1rem;
         min-height: 50px;
         max-height: 60px;
+    }
+
+    .useravatar{
+        max-height: 32px;
+        max-width: 32px;
     }
 
     // Mobile horizontal view, prefered vertical view and now need addidtional query for H-view

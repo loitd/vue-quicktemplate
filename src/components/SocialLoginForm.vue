@@ -45,20 +45,29 @@ export default {
         //   
       }
     },
+    mounted() {
+        console.log("Yes, it run automatically when this component loaded")
+        // this.$router.push("/")
+        // this.$store.dispatch("socialLogin", 1985)
+    },
+    watch: {
+        // 
+    },
     methods: {
         ggSignIn: function (event) {
             // Prevent default action
             event.preventDefault()
-            // console.log("Begin google authentication!");
-            Vue.allAuth().google().init()
             // console.log("This is this before calling allAuth(): ");
             // console.log(this); //--> at this time this is a Vue instance
             // Assign that for accessing Vue object inside Vue.allAuth()
             let that = this
             Vue.allAuth().google().signIn(function (googleUser) {
                 // console.log("This is googleUser in SocialLoginForm: "+googleUser);
-                Vue.allAuth().google().printInfo() //just to check what you received
-                // console.log("This is this in SocialLoginForm: ");
+                // Vue.allAuth().google().printInfo() //just to check what you received
+                // All check for authenticated moved to ----> Vuex
+                let profile = googleUser.getBasicProfile()
+                // Now saving to store with store socialLogin methods
+                that.$store.dispatch("socialLogin", profile)
                 // console.log(this); //--> at this time, this is undefined, that will be a Vue instance
                 that.$router.push("/")
             }, function (error) {
@@ -79,8 +88,8 @@ export default {
         },
         fbSignIn: function(event){
             event.preventDefault();
-            Vue.allAuth().facebook().signIn(function(facebookUser){
-                console.log(facebookUser)
+            Vue.allAuth().facebook().signIn(function(response){
+                console.log(response)
             }, function(error){
                 console.log("Something went wrong!");
                 console.log(error);
