@@ -23,8 +23,8 @@
                 </template>
                 <b-dropdown-item href="#"><font-awesome-icon :icon="['fas', 'user']" class="mr-1" />My Profile</b-dropdown-item>
                 <b-dropdown-divider />
-                <b-dropdown-item to="/auth/login"><font-awesome-icon :icon="['fas', 'sign-in-alt']" class="mr-1" />Login</b-dropdown-item>
-                <b-dropdown-item href="/auth/logout"><font-awesome-icon :icon="['fas', 'sign-out-alt']" class="mr-1" />Logout</b-dropdown-item>
+                <b-dropdown-item v-show="!this.$store.getters.isAuthenticated" to="/auth/login"><font-awesome-icon :icon="['fas', 'sign-in-alt']" class="mr-1" />Login</b-dropdown-item>
+                <b-dropdown-item v-show="this.$store.getters.isAuthenticated" href="/auth/logout"><font-awesome-icon :icon="['fas', 'sign-out-alt']" class="mr-1" />Logout</b-dropdown-item>
             </b-nav-item-dropdown>
         </b-navbar-nav>
     </b-navbar>
@@ -48,6 +48,9 @@ export default {
     .useravatar{
         max-height: 32px;
         max-width: 32px;
+        border-radius: 20%;
+        border: 1px solid lightgray;
+        padding: 1px;
     }
 
     // Mobile horizontal view, prefered vertical view and now need addidtional query for H-view

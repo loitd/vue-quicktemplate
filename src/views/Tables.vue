@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div class="tables">
     <!-- <img alt="Vue logo" src="../assets/logo.png" />
     <HelloWorld msg="Welcome to Your Vue.js Quick Template App" /> -->
   
@@ -11,7 +11,7 @@
         <b-col sm="8" md="9">
           <Navbar />
           <div id="pageContent">
-            <ServiceCard />
+            <BigTable />
           </div>
           <Footer />
         </b-col>
@@ -26,7 +26,7 @@
 import HelloWorld from "@/components/HelloWorld.vue";
 import Navbar from "@/components/Navbar.vue";
 import Sidebar from "@/components/Sidebar.vue";
-import ServiceCard from "@/components/ServiceCard.vue";
+import BigTable from "@/components/BigTable.vue";
 import Footer from "@/components/Footer.vue";
 
 export default {
@@ -34,7 +34,7 @@ export default {
   components: {
     Navbar,
     Sidebar,
-    ServiceCard,
+    BigTable,
     Footer,
   }
 };
@@ -48,7 +48,6 @@ export default {
   #pageContent {
     // Push footer / let footer stay at the bottom by define content height
     min-height: calc(100vh - 128px);
-    padding-top: 10px;
   }
 </style>
 

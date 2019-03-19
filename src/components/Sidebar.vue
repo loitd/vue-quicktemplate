@@ -12,18 +12,18 @@
         </b-list-group-item>
         <!-- All other items tobe hidden in mobile-->
         <b-collapse id="vqtToggleButton1" visible>
-            <b-list-group-item href="#" class="vqtSidebarItem">
+            <router-link to="/" exact class="vqtSidebarItem">
                 <span class="vqtSidebarItemIcon"><font-awesome-icon :icon="['fas', 'chalkboard']" /></span>
                 <span class="vqtSidebarItemText">Dashboard</span>
-            </b-list-group-item>
+            </router-link>
             <b-list-group-item href="#" class="vqtSidebarItem">
                 <span class="vqtSidebarItemIcon"><font-awesome-icon :icon="['fas', 'users']" /></span>
                 <span class="vqtSidebarItemText">User Profile</span>
             </b-list-group-item>
-            <b-list-group-item href="#" class="vqtSidebarItem" active>
+            <router-link to="/tables" exact class="vqtSidebarItem">
                 <span class="vqtSidebarItemIcon"><font-awesome-icon :icon="['fas', 'table']" /></span>
                 <span class="vqtSidebarItemText">Table List</span>
-            </b-list-group-item>
+            </router-link>
             <b-list-group-item href="#" class="vqtSidebarItem">
                 <span class="vqtSidebarItemIcon"><font-awesome-icon :icon="['fab', 'typo3']" /></span>
                 <span class="vqtSidebarItemText">Typography</span>
@@ -42,16 +42,24 @@
             </b-list-group-item>
             <!-- Items with Accordion feature -->
             <b-list-group-item href="#" class="vqtSidebarItem vqtSidebarItemHidden" v-b-toggle.vqtSideBarAccordion1>
-                <span class="vqtSidebarItemIcon"><font-awesome-icon :icon="['fas', 'user']" /></span>
+                <span class="vqtSidebarItemIcon">
+                    <!-- check for user login or not and display here -->
+                    <img v-if="this.$store.getters.isAuthenticated" :src="this.$store.getters.getUserAvatar" class="useravatar"/>
+                    <em v-else><font-awesome-icon :icon="['fas', 'user']" /></em>
+                </span>
                 <span class="vqtSidebarItemText">My Profile</span>
                 <span class="vqtCaretButton ml-auto"><font-awesome-icon :icon="['fas', 'angle-down']" /></span>
             </b-list-group-item>
             <b-collapse id="vqtSideBarAccordion1" class="vqtSideBarAccordion">
-                <b-list-group-item to="/login" class="vqtSidebarItem vqtSidebarItemHidden">
+                <b-list-group-item v-show="this.$store.getters.isAuthenticated" to="#" class="vqtSidebarItem vqtSidebarItemHidden">
+                    <span class="vqtSidebarItemIcon"><font-awesome-icon :icon="['fas', 'user']" /></span>
+                    <span class="vqtSidebarItemText">My Profile</span>
+                </b-list-group-item>
+                <b-list-group-item v-show="!this.$store.getters.isAuthenticated" to="/auth/login" class="vqtSidebarItem vqtSidebarItemHidden">
                     <span class="vqtSidebarItemIcon"><font-awesome-icon :icon="['fas', 'sign-in-alt']" /></span>
                     <span class="vqtSidebarItemText">Login</span>
                 </b-list-group-item>
-                <b-list-group-item href="#" class="vqtSidebarItem vqtSidebarItemHidden">
+                <b-list-group-item v-show="this.$store.getters.isAuthenticated" href="/auth/logout" class="vqtSidebarItem vqtSidebarItemHidden">
                     <span class="vqtSidebarItemIcon"><font-awesome-icon :icon="['fas', 'sign-out-alt']" /></span>
                     <span class="vqtSidebarItemText">Logout</span>
                 </b-list-group-item>
@@ -112,6 +120,7 @@ export default {
         padding: 0.75rem;
         border-radius: 0.375rem;
         margin: 0.15rem;
+        color: #2c3e50;
     }
     // Focus must place before active to make sure effect of active could not be overlapped with focus
     .vqtSidebarItem:focus,
@@ -121,6 +130,12 @@ export default {
     }
     .vqtSidebarItem:active,
     .vqtSidebarItem.active {
+        background-color: seagreen;
+        border: 0.1px solid seagreen;
+        color: white;
+    }
+    .vqtSidebarItem.router-link-exact-active, 
+    .vqtSidebarItem.router-link-active{
         background-color: seagreen;
         border: 0.1px solid seagreen;
         color: white;
@@ -142,6 +157,14 @@ export default {
     }
     .vqtSidebarItemLast {
         
+    }
+
+    .useravatar{
+        max-height: 18px;
+        max-width: 18px;
+        border-radius: 20%;
+        border: 1px solid lightgray;
+        padding: 1px;
     }
 
     // Mobile horizontal view, prefered vertical view and now need addidtional query for H-view

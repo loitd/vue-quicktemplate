@@ -26,6 +26,13 @@ const mutations = {
     state.uemail = socialUser.getEmail()
     state.uname = socialUser.getGivenName()
   },
+  socialLogout(state){
+    // Update in uid state but only state
+    state.uid = ""
+    state.uavatar = ""
+    state.uemail = ""
+    state.uname = ""
+  },
 }
 
 // Action calls Mutation which updates State directly. ~Method in Vue can updates Data
@@ -39,6 +46,16 @@ const actions = {
     localStorage.setItem("uavatar", socialUser.getImageUrl())
     localStorage.setItem("uemail", socialUser.getEmail())
     localStorage.setItem("uname", socialUser.getGivenName())
+  },
+  socialLogout: ({commit}) => {
+    // Logout all logged in users
+    // delete in state
+    commit("socialLogout")
+    // delete in storage
+    localStorage.removeItem("uid")
+    localStorage.removeItem("uavatar")
+    localStorage.removeItem("uemail")
+    localStorage.removeItem("uname")
   }
 }
 
