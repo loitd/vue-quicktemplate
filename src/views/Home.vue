@@ -11,7 +11,14 @@
         <b-col sm="8" md="9">
           <Navbar />
           <div id="pageContent">
-            <ServiceCard />
+            <div class="row">
+              <div class="col-sm-4 col-md-3"><ShortCard/></div>
+              <div class="col-sm-4 col-md-3"><ShortCard/></div>
+              <div class="col-sm-4 col-md-3"><ShortCard/></div>
+              <div class="col-sm-4 col-md-3"><ShortCard/></div>
+            </div>
+            <LongCard cid="ServiceCard1" ctitle="MGB"/>
+            <LongCard cid="ServiceCard2" ctitle="MGP"/>
           </div>
           <Footer />
         </b-col>
@@ -26,7 +33,8 @@
 import HelloWorld from "@/components/HelloWorld.vue";
 import Navbar from "@/components/Navbar.vue";
 import Sidebar from "@/components/Sidebar.vue";
-import ServiceCard from "@/components/ServiceCard.vue";
+import LongCard from "@/components/LongCard.vue";
+import ShortCard from "@/components/ShortCard.vue";
 import Footer from "@/components/Footer.vue";
 
 export default {
@@ -34,7 +42,8 @@ export default {
   components: {
     Navbar,
     Sidebar,
-    ServiceCard,
+    ShortCard,
+    LongCard,
     Footer,
   }
 };

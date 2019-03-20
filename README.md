@@ -1,11 +1,12 @@
 # vue-quick-template
 Vue.JS quick template with all for quick and handy start:
-* Mobile-first designed components/pages: Login, Simple CRUD, Navbar, Sidebar, Google Authentication, ... 
+* Mobile-first designed components/pages
+* 7 common components 
 * Progressive Web Application (PWA) ready (see all capable of PWA compared to Natives: https://whatwebcando.today/), 
 * Very detail comments about all things (Readable code)
 * Preconfigured intergration with `CircleCI`, `Codecov`, `Travis-CI` (with pre-running-configures). Right now this repo is using Travis but Circle CI is also preconfigured.
 * Preconfigured scripts to deploy on `github.io` and `surge.sh`. Modified register service to fix error: `The path of the provided scope ('/') is not under the max scope allowed ('/vue-quick-template/'). Adjust the scope, move the Service Worker script, or use the Service-Worker-Allowed HTTP header to allow the scope.` for domains like: `loitd.github.io/vue-quick-template` to make sure register service worker successfully.
-* Social authentication with Google (`vue-google-oauth`)
+* Social authentication with Google (`vue-all-oauth`) and Google integrated ready (as of Mar 2019)
 * Full of pluggins available by default With additional pluggins beside common ones:
     * `@babel/core` lastest 7.3.3 instead of old default `babel-core` version 7.0.0-bridge.0
     * `vue@cli` v3.4
@@ -15,7 +16,7 @@ Vue.JS quick template with all for quick and handy start:
     * `bootstrap-vue` for Bootstrap 4, 
     * preconfigued `fontawesome` for FontAwesome 5,
     * `sass-loader` and `node-sass` for scss pre-processing
-    * `chartjs`,  
+    * `chartjs`, `vue-chartjs` interated ready 
     * Unit test with `jest` with test coverage, E2E test with `nightwatch`,
 
 ## Status
