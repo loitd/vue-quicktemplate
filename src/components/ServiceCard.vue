@@ -10,7 +10,7 @@
                     :options="options"/>
                 <!-- This is the content of the card -->
                 <em slot="footer">Footer Slot</em>
-                </b-card>
+                </line-chart>
             </b-card-group>
         </div>    
     </div>
