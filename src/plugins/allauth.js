@@ -1,8 +1,8 @@
 import Vue from "vue";
 // In production
-// import VueAllAuth from "vue-all-auth";
+import VueAllAuth from "vue-all-auth";
 // In dev
-import VueAllAuth from "@/modules/vue-all-auth";
+// import VueAllAuth from "@/modules/vue-all-auth";
 
 Vue.use(VueAllAuth, { 
     google: {

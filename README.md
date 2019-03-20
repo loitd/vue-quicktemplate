@@ -65,6 +65,7 @@ To pull from github to local
 git pull origin master --allow-unrelated-histories
 ```
 ## Project setup (install global packages with npm make you dont have to add yarn to PATH)
+Some dependencies need Python 2.7. Please install Python 2.7 and add to PATH first.
 ```
 npm install yarn
 npm install -g @vue/cli
