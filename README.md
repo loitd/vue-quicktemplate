@@ -64,6 +64,8 @@ To pull from github to local
 ```
 git pull origin master --allow-unrelated-histories
 ```
+* Deploy on server:  
+Need consider this guide: https://router.vuejs.org/guide/essentials/history-mode.html#example-server-configurations
 ## Project setup (install global packages with npm make you dont have to add yarn to PATH)
 Some dependencies need Python 2.7. Please install Python 2.7 and add to PATH first.
 ```
